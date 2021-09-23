@@ -1,2 +1,2 @@
-# eitaapykit
-Toolkit for eitaa messenger
+# Eitaa PyKit
+This repo contains a simple library for work with eitaa messenger
