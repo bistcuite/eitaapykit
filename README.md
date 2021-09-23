@@ -5,3 +5,10 @@ This repo contains a simple library for work with eitaa messenger's api
 ```
 pip install eitaapykit
 ```
+
+## Get information of a channel
+```
+import eitaa
+print(eitaa.get_info("channel ID"))
+```
+It is returns a dict object contains channel name, image url, subscriber count, channel description.
