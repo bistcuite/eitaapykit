@@ -7,7 +7,7 @@ pip install eitaapykit
 ```
 
 ## Get information of a channel
-```
+```py
 import eitaa
 print(eitaa.get_info("channel ID"))
 ```
