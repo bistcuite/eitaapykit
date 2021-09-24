@@ -7,7 +7,7 @@ pip install eitaapykit
 ```
 
 ## Get information of a channel
-- get_info(channel_id)
+you can get information of a channel with `get_info(channel_id)` function in `eitaa` moduel \
 params :
 - ***channel_id***: your channel id, to get information of it(without `@`)
 
@@ -27,11 +27,19 @@ It is returns a dict object contains channel name, image url, subscriber count, 
 ```
 
 ## Send a message
+you can send a meesage to your channel with `send_message(token,chat_id,text,pin=False)` function in `eitaa` moduel \
+params :
+- ***token*** : your [eitaayar.ir](https://eitaayar.ir)
+- ***chat_id*** : your chat id(if your chat is a channel set it to channel id, and if your chat is a group set it to group invite link)
+- ***text*** : text to send
+- ***pin***(optional) : if you want to message pinned in chat, set it `True`
+
+Example :
 ```py
 import eitaa
-TOKEN = "" # your token api in eitaayar.ir
+TOKEN = "eitaayar.ir_token"
 print(eitaa.send_message(TOKEN,"chat id","message text",pin=1)
 ```
 It is returns a bool value that shows send status
-True --> message sent successfully
-False --> error in send message
+`True` --> message sent successfully
+`False` --> error in send message
