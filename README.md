@@ -7,11 +7,24 @@ pip install eitaapykit
 ```
 
 ## Get information of a channel
+- get_info(channel_id)
+params :
+- ***channel_id***: your channel id, to get information of it 
+
+Example :
 ```py
 import eitaa
 print(eitaa.get_info("channel ID"))
 ```
 It is returns a dict object contains channel name, image url, subscriber count, channel description.
+```
+{
+  "name": "channel name",
+  "image_url": "channel image url",
+  "users" : "subscribers count",
+  "desc" : "description of channel",
+}
+```
 
 ## Send a message
 ```py
