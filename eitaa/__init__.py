@@ -23,28 +23,31 @@ def get_info(channel_id):
     }
     return result
 
-def send_message(token,chat_id,text,pin=False):
+def send_message(token,chat_id,text,pin=False,view_delete=-1):
     r = requests.post(
         f"https://eitaayar.ir/api/{token}/sendMessage",
         data = {
             'chat_id' : chat_id,
             'text' : text,
-            'pin' : int(pin)
+            'pin' : int(pin),
+            'viewCountForDelete' : view_delete,
         }
     )
-    return bool(r.json()['ok'])
+    if bool(r.json()['ok']) : return True
+    else : return r.json()
 
-def send_file(token,chat_id,caption,file,pin=False):
+def send_file(token,chat_id,caption,file,pin=False,view_delete=-1):
     r = requests.post(
         f"https://eitaayar.ir/api/{token}/sendFile",
         data = {
             'chat_id' : chat_id,
             'caption' : caption,
-            'pin' : int(pin)
+            'pin' : int(pin),
+            'viewCountForDelete' : view_delete,
         },
         files={
             'file': open(file,'rb'),
         }
     )
-    print(r.json())
-    return bool(r.json()['ok'])
+    if bool(r.json()['ok']) : return True
+    else : return r.json()
