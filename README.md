@@ -62,3 +62,6 @@ print(eitaa.send_file(TOKEN,"chat id","caption","README.txt",pin=1)
 It is returns a bool value that shows send status
 `True` --> file sent successfully
 `False` --> error in send message
+
+## About
+This project is licensed under the **MIT** License, for more information read [License File](LICENSE)
