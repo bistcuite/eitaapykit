@@ -9,7 +9,7 @@ pip install eitaapykit
 ## Get information of a channel
 - get_info(channel_id)
 params :
-- ***channel_id***: your channel id, to get information of it 
+- ***channel_id***: your channel id, to get information of it(without `@`)
 
 Example :
 ```py
