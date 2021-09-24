@@ -40,6 +40,7 @@ def send_file(token,chat_id,caption,file,pin=False):
         data = {
             'chat_id' : chat_id,
             'caption' : caption,
+            'pin' : int(pin)
         },
         files={
             'file': open(file,'rb'),
