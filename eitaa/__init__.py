@@ -26,7 +26,7 @@ def get_info(channel_id):
     return result
 
 
-class EitaaBot(object):
+class Eitaa(object):
     def __init__(self, token):
         self.token = token
 
