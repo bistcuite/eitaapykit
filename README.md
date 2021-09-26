@@ -3,9 +3,13 @@ This repo contains a simple library for work with [Eitaa](https://eitaa.com/) me
 
 PyPI Page : [https://pypi.org/project/Eitaa-PyKit](https://pypi.org/project/Eitaa-PyKit/)
 
-## Install
+## Install via pip
 ```
 pip install eitaapykit
+```
+if you use linux :
+```
+pip3 install eitaapykit
 ```
 
 ## Get information of a channel
