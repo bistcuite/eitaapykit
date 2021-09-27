@@ -15,7 +15,7 @@ pip3 install eitaapykit
 ## Get information of a channel
 you can get information of a channel with `get_info(channel_id)` function in `eitaa` module \
 params :
-- ***channel_id***: your channel id, to get information of it(without `@`)
+- ***channel_id***: your channel id to get information of it(without `@`)
 
 Example :
 ```py
