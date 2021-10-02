@@ -71,5 +71,7 @@ It is returns a bool value that shows send status
 `True` --> file sent successfully
 `False` --> error in send message
 
+## Thank You
+![Stargazers](https://reporoster.com/stars/notext/bistcuite/eitaapykit)](https://github.com/bistcuite/eitaapykit/stargazers)
 ## About
 This project is licensed under the **MIT** License, for more information read [License File](LICENSE)
