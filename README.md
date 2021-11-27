@@ -4,10 +4,11 @@ This repo contains a simple library for work with [Eitaa](https://eitaa.com/) me
 PyPI Page : [https://pypi.org/project/Eitaa-PyKit](https://pypi.org/project/Eitaa-PyKit/)
 
 ## Install via pip
+Windows:
 ```
 pip install eitaapykit
 ```
-if you use linux :
+Linux:
 ```
 pip3 install eitaapykit
 ```
