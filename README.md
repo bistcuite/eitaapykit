@@ -72,4 +72,4 @@ It is returns a bool value that shows send status
 `False` --> error in send message
 
 ## About
-This project is licensed under the **MIT** License, for more information read [License File](LICENSE)
+This project is licensed under the **MIT** License, for more information read [License](LICENSE)
