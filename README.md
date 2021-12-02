@@ -34,7 +34,7 @@ It is returns a dict object contains channel name, image url, subscriber count, 
 ```
 
 ## Send a message
-you can send a meesage to your channel with `send_message(token,chat_id,text,pin=False,view_delete=-1)` function in `eitaa` moduel \
+you can send a meesage to your channel\group with `send_message(token,chat_id,text,pin=False,view_delete=-1)` function in `eitaa` moduel \
 params :
 - ***token*** : your [eitaayar.ir](https://eitaayar.ir) token
 - ***chat_id*** : your chat id(if your chat is a channel set it to channel id, and if your chat is a group set it to group invite link)
