@@ -23,7 +23,7 @@ Example :
 import eitaa
 print(eitaa.get_info("channel ID"))
 ```
-It is returns a dict object contains channel name, image url, subscriber count, channel description.
+It is returns a `dict` object contains channel name, image url, subscriber count, channel description.
 ```json
 {
   "name": "channel name",
