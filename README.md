@@ -72,5 +72,8 @@ It is returns a bool value that shows send status
 `True` --> file sent successfully
 `False` --> error in send message
 
+## Todo
+More options with selenium.
+
 ## About
 This project is licensed under the **MIT** License, for more information read [License](LICENSE)
