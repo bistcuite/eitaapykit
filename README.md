@@ -37,7 +37,7 @@ It is returns a `dict` object contains channel name, image url, subscribers coun
 you can send a meesage to your channel\group with `send_message(token,chat_id,text,pin=False,view_delete=-1)` function in `eitaa` moduel \
 params :
 - ***token*** : your [eitaayar.ir](https://eitaayar.ir) token
-- ***chat_id*** : your chat id(if your chat is a channel set it to channel id, and if your chat is a group set it to group invite link)
+- ***chat_id*** : your chat id(if your chat is a channel set it to channel id, and if your chat is a group set it to your group's invite link)
 - ***text*** : text to send
 - ***pin***(optional) : if you want to message pinned in chat, set it `True`
 - ***view_delete***(optional) : if view counts be equal to `view_delete`, message will delete
