@@ -51,7 +51,7 @@ print(eitaa.send_message(TOKEN,"chat id","message text",pin=1)
 It is returns a bool value that shows send status
 
 - `True` : message sent successfully
-- `False` --> error in send message
+- `False` : error in send message
 
 ## Send a file
 you can send a file to your channel with `send_file(token,chat_id,caption,file,pin=False,view_delete=-1)` function in `eitaa` moduel \
