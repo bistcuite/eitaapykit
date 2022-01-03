@@ -50,7 +50,7 @@ print(eitaa.send_message(TOKEN,"chat id","message text",pin=1)
 ```
 It is returns a bool value that shows send status
 
-- `True` --> message sent successfully
+- `True` : message sent successfully
 - `False` --> error in send message
 
 ## Send a file
