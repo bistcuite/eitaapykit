@@ -2,6 +2,7 @@
 This repo contains a simple library for work with [Eitaa](https://eitaa.com/) messenger's api.
 
 [![Pypi](https://img.shields.io/pypi/v/eitaa-pykit)](https://pypi.org/project/Eitaa-PyKit)
+[![Downloads](https://img.shields.io/pypi/dm/eitaa-pykit)](https://pypi.org/project/Eitaa-PyKit)
 
 ## Install via pip
 Windows:
