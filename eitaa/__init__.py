@@ -3,10 +3,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-
-
-
-
 class Eitaa(object):
     def __init__(self, token):
         self.token = token
