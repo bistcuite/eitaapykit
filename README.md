@@ -24,7 +24,7 @@ eitaa_obj = Eitaa("your eitaayar.ir token")
 For get information of a channel you can use `get_info(channel_id)` function in `Eitaa` class.
 
 params :
-- ***channel_id***: your channel id to get information of it(without `@`)
+- ***channel_id***: channel id to get information(without `@`)
 
 **NOTE**: *This method is a static method and you can call it without creating any object from `Eitaa`.*
 
