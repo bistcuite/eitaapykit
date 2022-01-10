@@ -19,6 +19,7 @@ First create an object from `Eitaa` class :
 from eitaa import Eitaa
 eitaa_obj = Eitaa("your eitaayar.ir token")
 ```
+The methods call from this class.
 
 ## Get information of a channel
 For get information of a channel you can use `get_info(channel_id)` function in `Eitaa` class.
