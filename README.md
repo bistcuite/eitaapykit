@@ -13,18 +13,27 @@ Linux:
 ```
 pip3 install eitaapykit
 ```
+## `Eitaa` class methods
+First create an object from `Eitaa` class :
+```
+from eitaa import Eitaa
+eitaa_obj = Eitaa("your eitaayar.ir token")
+```
 
 ## Get information of a channel
-you can get information of a channel with `get_info(channel_id)` function in `eitaa` module \
+For get information of a channel you can use `get_info(channel_id)` function in `Eitaa` class.
 params :
 - ***channel_id***: your channel id to get information of it(without `@`)
 
+NOTE: This method is a static method and you can call it without creating any object from `Eitaa`.
+
 Example :
 ```py
-import eitaa
-print(eitaa.get_info("channel ID"))
+print(eitaa_obj.get_info("channel ID"))
+# or :
+print(Eitaa.get_info("channel ID"))
 ```
-It is returns a `dict` object contains channel name, image url, subscribers count, channel description.
+It returns a `dict` object contains channel name, image url, subscribers count, channel description.
 ```json
 {
   "name": "channel name",
@@ -35,47 +44,44 @@ It is returns a `dict` object contains channel name, image url, subscribers coun
 ```
 
 ## Send a message
-you can send a meesage to your channel\group with `send_message(token,chat_id,text,pin=False,view_delete=-1)` function in `eitaa` moduel \
+For send a meesage to your channel\group you can use`send_message(chat_id,text,pin=False,view_delete=-1)` function in `Eitaa` class.
+
 params :
 - ***token*** : your [eitaayar.ir](https://eitaayar.ir) token
 - ***chat_id*** : your chat id(if your chat is a channel set it to channel id, and if your chat is a group set it to your group's invite link)
 - ***text*** : text to send
 - ***pin***(optional) : if you want to message pinned in chat, set it `True`
-- ***view_delete***(optional) : if view counts be equal to `view_delete`, message will delete
+- ***view_delete***(optional) : if views of your post be equal to `view_delete`, message will delete
 
 Example :
 ```py
-import eitaa
-TOKEN = "eitaayar.ir_token"
-print(eitaa.send_message(TOKEN,"chat id","message text",pin=1)
+print(eitaa_obj.send_message("chat id","message text",pin=1)
 ```
-It is returns a bool value that shows send status
-
+It returns a bool value that shows send status :
 - `True` : message sent successfully
 - `False` : error in send message
 
 ## Send a file
-you can send a file to your channel with `send_file(token,chat_id,caption,file,pin=False,view_delete=-1)` function in `eitaa` moduel \
+For send a file to your channel you can use`send_file(token,chat_id,caption,file,pin=False,view_delete=-1)` function in `eitaa` moduel \
 params :
 - ***token*** : your [eitaayar.ir](https://eitaayar.ir) token
-- ***chat_id*** : your chat id(if your chat is a channel set it to channel id, and if your chat is a group set it to group invite link)
+- ***chat_id*** : your chat id(if your chat is a channel set it to channel id/invite link, and if your chat is a group set it to group invite link)
 - ***caption*** : caption of your file(similar to `text` in `send_message` function)
 - ***file*** : your file name to send to chat
 - ***pin***(optional) : if you want to file pinned in chat, set it `True`
-- ***view_delete***(optional) : if view counts be equal to `view_delete`, file will delete
+- ***view_delete***(optional) : if views of your post be equal to `view_delete`, file will delete
 
 Example :
 ```py
-import eitaa
-TOKEN = "eitaayar.ir_token"
-print(eitaa.send_file(TOKEN,"chat id","caption","README.txt",pin=1)
+print(eitaa_obj.send_file("chat id","caption","README.txt",pin=1)
 ```
-It is returns a bool value that shows send status
+It returns a bool value that shows send status :
 `True` --> file sent successfully
 `False` --> error in send message
 
 ## Todo
-More options with selenium.
+- Better error handler on `Eitaa.send_*'
+- More options with selenium.
 
 ## About
-This project is licensed under the **MIT** License, for more information read [License](LICENSE)
+This project is licensed under the **MIT** License, for more information read [License](LICENSE).
