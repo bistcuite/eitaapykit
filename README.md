@@ -46,11 +46,11 @@ It returns a `dict` object contains channel's name, image's url, subscribers cou
 ```
 
 ## Send a message
-For send a meesage to your channel\group you can use`send_message(chat_id,text,pin=False,view_delete=-1)` function in `Eitaa` class.
+For send a meesage to your channel/group you can use`send_message(chat_id,text,pin=False,view_delete=-1)` function in `Eitaa` class.
 
 params :
 - ***token*** : your [eitaayar.ir](https://eitaayar.ir) token
-- ***chat_id*** : your chat id(if your chat is a channel set it to channel id, and if your chat is a group set it to your group's invite link)
+- ***chat_id*** : your chat id(if your chat is a channel set it to channel id/invite link, and if your chat is a group set it to your group's invite link)
 - ***text*** : text to send
 - ***pin***(optional) : if you want to message pinned in chat, set it `True`
 - ***view_delete***(optional) : if views of your post be equal to `view_delete`, message will delete
@@ -64,7 +64,7 @@ It returns a bool value that shows send status :
 - `False` : error in send message
 
 ## Send a file
-For send a file to your channel you can use`send_file(token,chat_id,caption,file,pin=False,view_delete=-1)` function in `eitaa` moduel \
+For send a file to your channel you can use`send_file(token,chat_id,caption,file,pin=False,view_delete=-1)` function in `Eitaa` class.
 
 params :
 - ***token*** : your [eitaayar.ir](https://eitaayar.ir) token
@@ -79,8 +79,8 @@ Example :
 print(eitaa_obj.send_file("chat id","caption","README.txt",pin=1)
 ```
 It returns a bool value that shows send status :
-`True` --> file sent successfully
-`False` --> error in send message
+- `True` : file sent successfully
+- `False` : error in send message
 
 ## Todo
 - Better error handler on `Eitaa.send_*'
