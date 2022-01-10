@@ -24,7 +24,7 @@ jobs:
         VER=$(cat version)
         echo "VERSION=$VER" >> $GITHUB_ENV
     - name: Install locally to test
-      run: python -m pip install ./dist/eitaa-pykit-${{ env.VERSION }}.tar.gz
+      run: python -m pip install ./dist/eitaa-${{ env.VERSION }}.tar.gz
     # - name: Run unit test
     #  run: python ./test/test_eitaa.py
     - name: Publish package
