@@ -83,7 +83,7 @@ It returns a bool value that shows send status :
 - `False` : error in send message
 
 ## Todo
-- Better error handler on `Eitaa.send_*'
+- Better error handler on `Eitaa.send_*`
 - More options with selenium.
 
 ## About
