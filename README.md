@@ -87,6 +87,7 @@ It returns a bool value that shows send status :
 ## Todo
 - Better error handler on `Eitaa.send_*`
 - More options with selenium.
+- CLI tool
 
 ## About
 This project is licensed under the **MIT** License, for more information read [License](LICENSE).
