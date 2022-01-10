@@ -13,7 +13,7 @@ Linux:
 ```
 pip3 install eitaapykit
 ```
-## `Eitaa` class methods
+## `Eitaa` class
 First create an object from `Eitaa` class :
 ```
 from eitaa import Eitaa
