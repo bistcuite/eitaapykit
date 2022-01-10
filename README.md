@@ -85,7 +85,7 @@ It returns a bool value that shows send status :
 - `False` : error in sending message
 
 ## Todo
-- Better error handler on `Eitaa.send_*`
+- Better error handler on `Eitaa.send_*()`
 - More options with selenium.
 - CLI tool
 
