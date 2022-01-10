@@ -1,5 +1,5 @@
-# Eitaa PyKit
-This repo contains a simple library for work with [Eitaa](https://eitaa.com/) messenger's api.
+# Eitaa Pykit
+Toolkit for [Eitaa](https://eitaa.com/) messenger.
 
 [![Pypi](https://img.shields.io/pypi/v/eitaa-pykit)](https://pypi.org/project/Eitaa-PyKit)
 [![Downloads](https://img.shields.io/pypi/dm/eitaa-pykit)](https://pypi.org/project/Eitaa-PyKit)
