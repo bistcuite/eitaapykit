@@ -52,7 +52,6 @@ It returns a `dict` object contains channel's name, image's url, subscribers cou
 For send a meesage to your channel/group you can use`send_message(chat_id,text,pin=False,view_delete=-1)` function in `Eitaa` class.
 
 params :
-- ***token*** : your [eitaayar.ir](https://eitaayar.ir) token
 - ***chat_id*** : your chat id(if your chat is a channel set it to channel id/invite link, and if your chat is a group set it to your group's invite link)
 - ***text*** : text to send
 - ***pin***(optional) : if you want to message pinned in chat, set it `True`
@@ -71,7 +70,6 @@ It returns a bool value that shows send status :
 For send a file to your channel you can use`send_file(token,chat_id,caption,file,pin=False,view_delete=-1)` function in `Eitaa` class.
 
 params :
-- ***token*** : your [eitaayar.ir](https://eitaayar.ir) token
 - ***chat_id*** : your chat id(if your chat is a channel set it to channel id/invite link, and if your chat is a group set it to group invite link)
 - ***caption*** : caption of your file(similar to `text` in `send_message` function)
 - ***file*** : your file name to send to chat
