@@ -22,6 +22,7 @@ eitaa_obj = Eitaa("your eitaayar.ir token")
 
 ## Get information of a channel
 For get information of a channel you can use `get_info(channel_id)` function in `Eitaa` class.
+
 params :
 - ***channel_id***: your channel id to get information of it(without `@`)
 
@@ -63,6 +64,7 @@ It returns a bool value that shows send status :
 
 ## Send a file
 For send a file to your channel you can use`send_file(token,chat_id,caption,file,pin=False,view_delete=-1)` function in `eitaa` moduel \
+
 params :
 - ***token*** : your [eitaayar.ir](https://eitaayar.ir) token
 - ***chat_id*** : your chat id(if your chat is a channel set it to channel id/invite link, and if your chat is a group set it to group invite link)
