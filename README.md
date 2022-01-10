@@ -15,7 +15,7 @@ pip3 install eitaapykit
 ```
 ## `Eitaa` class
 First create an object from `Eitaa` class :
-```
+```py
 from eitaa import Eitaa
 eitaa_obj = Eitaa("your eitaayar.ir token")
 ```
@@ -26,7 +26,7 @@ For get information of a channel you can use `get_info(channel_id)` function in 
 params :
 - ***channel_id***: your channel id to get information of it(without `@`)
 
-NOTE: This method is a static method and you can call it without creating any object from `Eitaa`.
+**NOTE**: *This method is a static method and you can call it without creating any object from `Eitaa`.*
 
 Example :
 ```py
@@ -34,7 +34,8 @@ print(eitaa_obj.get_info("channel ID"))
 # or :
 print(Eitaa.get_info("channel ID"))
 ```
-It returns a `dict` object contains channel name, image url, subscribers count, channel description.
+
+It returns a `dict` object contains channel's name, image's url, subscribers count and channel's description.
 ```json
 {
   "name": "channel name",
