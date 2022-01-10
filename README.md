@@ -62,9 +62,10 @@ Example :
 ```py
 print(eitaa_obj.send_message("chat id","message text",pin=1)
 ```
+
 It returns a bool value that shows send status :
 - `True` : message sent successfully
-- `False` : error in send message
+- `False` : error in sending message
 
 ## Send a file
 For send a file to your channel you can use`send_file(token,chat_id,caption,file,pin=False,view_delete=-1)` function in `Eitaa` class.
@@ -83,7 +84,7 @@ print(eitaa_obj.send_file("chat id","caption","README.txt",pin=1)
 ```
 It returns a bool value that shows send status :
 - `True` : file sent successfully
-- `False` : error in send message
+- `False` : error in sending message
 
 ## Todo
 - Better error handler on `Eitaa.send_*`
