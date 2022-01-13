@@ -2,7 +2,7 @@
 Toolkit for [Eitaa](https://eitaa.com/) messenger.
 
 [![Pypi](https://img.shields.io/pypi/v/eitaa-pykit)](https://pypi.org/project/Eitaa-PyKit)
-[![Downloads](https://img.shields.io/pypi/dm/eitaa-pykit)](https://pypi.org/project/Eitaa-PyKit)
+[![Downloads](https://pepy.tech/badge/eitaa-pykit)](https://pepy.tech/project/eitaa-pykit)
 
 **NOTE** : *for send message to chats you should add [@sender](https://eitaa.com/sender) as manager to your chat.*
 
