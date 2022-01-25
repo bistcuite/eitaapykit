@@ -89,5 +89,5 @@ It returns a bool value that shows send status :
 - More options with selenium.
 - CLI tool(`eitaa-cli`)
 
-## About
+## Licence
 This project is licensed under the **MIT** License, for more information read [License](LICENSE).
