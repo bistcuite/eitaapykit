@@ -29,7 +29,7 @@ For get information of a channel you can use `get_info` function in `Eitaa` clas
 params :
 - ***channel_id***: channel id to get information(without `@`)
 
-**NOTE**: *This method is a static method and you can call it without creating any object from `Eitaa`.*
+**NOTE**: *This method is a static method and you can call it without creating any objects from `Eitaa`.*
 
 Example :
 ```py
