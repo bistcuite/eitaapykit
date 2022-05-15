@@ -44,7 +44,7 @@ It returns a `dict` object contains channel's name, image's url, subscribers cou
 ```
 
 ## Send a message
-For send a meesage to your channel/group you can use`send_message` function in `Eitaa` class.
+For sending a meesage to your chat, you can use`send_message` function in `Eitaa` class.
 
 params :
 - ***chat_id*** : your chat id(if your chat is a channel set it to channel id/invite link, and if your chat is a group set it to your group's invite link)
@@ -62,7 +62,7 @@ It returns a bool value that shows send status :
 - `False` : error in sending message
 
 ## Send a file
-For send a file to your channel you can use`send_file` function in `Eitaa` class.
+For sendibg a file to your chat, you can use `send_file` function in `Eitaa` class.
 
 params :
 - ***chat_id*** : your chat id(if your chat is a channel set it to channel id/invite link, and if your chat is a group set it to group invite link)
