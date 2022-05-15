@@ -6,14 +6,10 @@ Toolkit for [Eitaa](https://eitaa.com/) messenger.
 **NOTE** : *for sending message to chats you should add [@sender](https://eitaa.com/sender) as manager to your chat.*
 
 ## Install via pip
-Windows:
 ```
 pip install eitaapykit
 ```
-Linux:
-```
-pip3 install eitaapykit
-```
+
 ## `Eitaa` class
 First create an object from `Eitaa` class :
 ```py
