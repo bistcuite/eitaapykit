@@ -1,4 +1,4 @@
-# Eitaa Pykit
+# Eitaa Python Toolkit
 Toolkit for [Eitaa](https://eitaa.com/) messenger.
 
 **NOTE** : *for sending message to chats you should add [@sender](https://eitaa.com/sender) as manager to your chat.*
