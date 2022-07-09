@@ -79,7 +79,6 @@ It returns a bool value that shows send status :
 
 ## Todo
 - Better error handler on `Eitaa.send_*()`
-- More options with selenium.
 - CLI tool(`eitaa-cli`)
 - `mdbook` based documentation
 
