@@ -4,8 +4,8 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
     
 setup (
-    name='eitaa_pykit',
-    version='1.2.1',
+    name='eitaa',
+    version='1.3.0',
     packages=['eitaa'],
     long_description=long_description,
     long_description_content_type="text/markdown",
