@@ -2,6 +2,7 @@
 
 import requests
 from bs4 import BeautifulSoup
+from os.path import isfile
 
 class Eitaa(object):
     def __init__(self, token):
@@ -21,6 +22,9 @@ class Eitaa(object):
         return r.json()
 
     def send_file(self, chat_id, caption, file, pin=False, view_delete=-1):
+        if not isfile(file):
+            throw Exception(f"File `{file}` not found")
+
         r = requests.post(
             f"https://eitaayar.ir/api/{self.token}/sendFile",
             data={
