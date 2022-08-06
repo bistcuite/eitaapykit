@@ -23,7 +23,7 @@ class Eitaa(object):
 
     def send_file(self, chat_id, caption, file, pin=False, view_delete=-1):
         if not isfile(file):
-            throw Exception(f"File `{file}` not found")
+            raise Exception(f"File `{file}` not found")
 
         r = requests.post(
             f"https://eitaayar.ir/api/{self.token}/sendFile",
