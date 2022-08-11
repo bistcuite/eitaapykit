@@ -2,6 +2,7 @@
 Unofficial toolkit for [Eitaa](https://eitaa.com/) messenger.
 ![pypi](https://img.shields.io/pypi/v/eitaa)
 [![Downloads](https://pepy.tech/badge/eitaa)](https://pepy.tech/project/eitaa)
+![license](https://img.shields.io/badge/license-MIT-green)
 
 ## Install via pip
 ```
