@@ -1,6 +1,8 @@
 # Eitaa Python Toolkit
 Unofficial toolkit for [Eitaa](https://eitaa.com/) messenger.
 
+[![Downloads](https://pepy.tech/badge/eitaa)](https://pepy.tech/project/eitaa)
+
 ## Install via pip
 ```
 pip install eitaa
