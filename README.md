@@ -17,7 +17,7 @@ print(eitaa_obj.send_message("chat id","message text",pin=True))
 ```
 
 ## Documentation
-You can find documentation in [docs](docs/README.md).
+You can find documentation in [docs directory](docs/README.md).
 
 ## Licence
 This project is licensed under the **MIT** License, for more information read [License](LICENSE).
