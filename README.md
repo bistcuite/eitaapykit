@@ -11,10 +11,23 @@ pip install eitaa
 ```
 
 ## Example
+Getting channel's information :
+```py
+from eitaa import Eitaa
+print(Eitaa.get_info("eitta")) # "eitta" is a channel id
+```
+
+Sending messages :
 ```py
 from eitaa import Eitaa
 eitaa_obj = Eitaa("your eitaayar.ir token")
 print(eitaa_obj.send_message("chat id","message text",pin=True))
+```
+
+Getting trending hashtags :
+```py
+from eitaa import Eitaa
+trends = Eitaa.get_trends()
 ```
 
 ## Documentation
