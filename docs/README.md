@@ -13,6 +13,31 @@ from eitaa import Eitaa
 eitaa_obj = Eitaa("your eitaayar.ir token")
 ```
 
+## Get channel details
+To get details about a channel use `get_info` method.
+`get_info` method is a static method, you can call it without creating an instance of `Eitaa` class and it will return a json that contains 4 fields:
+- `name` : name of channel
+- `image_url` : url of channel's profile
+- `users` : subscribers cout
+- `desc` : channel description
+
+Example :
+```py
+from eitaa import Eitaa
+info = Eitaa.get_info("eitaa_faq")
+print(info)
+```
+
+Output :
+```
+{
+    'name': 'راهنمای جامع ایتا', 
+    'image_url': 'https://eitaa.com/assets/images/logos/channel.png', 
+    'users': '138798', 
+    'desc': 'پاسخ به پرسش\u200cهای متداول کاربران ایتا\n\nپشتیبانی کاربران:\n@support\n\nکانال اطلاع\u200cرسانی رسمی:\n@eitaa\n\nوبسایت رسمی برنامه:\nhttps://eitaa.com'
+}
+```
+
 ## Get trending hashtags
 You can get trending hashtags with `get_trends` method.
 `get_trends` method is a static method, you can call it without creating an instance of `Eitaa` class and it will return a json that contains 4 fields:
