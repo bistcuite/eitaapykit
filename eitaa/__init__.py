@@ -7,7 +7,15 @@ from os.path import isfile
 class Eitaa(object):
     def __init__(self, token):
         self.token = token
+    
+    def get_my_info(self):
+        r = requests.get(f"https://eitaayar.ir/api/{self.token}/getMe")
 
+        import json
+        result = json.loads(r.text)
+
+        return result["result"]
+    
     @staticmethod
     def get_info(channel_id):
         r = requests.get(f"https://eitaa.com/{channel_id}")
