@@ -10,11 +10,7 @@ class Eitaa(object):
     
     def get_my_info(self):
         r = requests.get(f"https://eitaayar.ir/api/{self.token}/getMe")
-
-        import json
-        result = json.loads(r.text)
-
-        return result["result"]
+        return r.json()["result"]
     
     @staticmethod
     def get_info(channel_id):
@@ -36,20 +32,24 @@ class Eitaa(object):
         }
         return result
         
-    def send_message(self, chat_id, text, pin=False, view_delete=-1):
+    def send_message(self, chat_id, text, pin=False, view_to_delete=-1,
+                    disable_notification=False, reply_to_message_id=None):
         r = requests.post(
             f"https://eitaayar.ir/api/{self.token}/sendMessage",
             data={
                 'chat_id': chat_id,
                 'text': text,
                 'pin': int(pin),
-                'viewCountForDelete': view_delete,
+                'viewCountForDelete': view_to_delete,
+                'disable_notification': int(disable_notification),
+                'reply_to_message_id' : reply_to_message_id if reply_to_message_id != None else '',
             }
         )
         print(type(r.json()))
         return r.json()
 
-    def send_file(self, chat_id, caption, file, pin=False, view_delete=-1):
+    def send_file(self, chat_id, caption, file, pin=False, view_to_delete=-1,
+                disable_notification=False, reply_to_message_id=None):
         if not isfile(file):
             raise Exception(f"File `{file}` not found")
 
@@ -59,7 +59,9 @@ class Eitaa(object):
                 'chat_id': chat_id,
                 'caption': caption,
                 'pin': int(pin),
-                'viewCountForDelete': view_delete,
+                'viewCountForDelete': view_to_delete,
+                'disable_notification': int(disable_notification),
+                'reply_to_message_id' : reply_to_message_id if reply_to_message_id != None else '',
             },
             files={
                 'file': open(file, 'rb'),

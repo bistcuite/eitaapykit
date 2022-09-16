@@ -31,7 +31,7 @@ trends = Eitaa.get_trends()
 ```
 
 ## Documentation
-You can find documentation in [docs directory](docs/README.md).
+See documentation [here](https://github.com/bistcuite/eitaapykit/tree/main/docs).
 
 ## Licence
 This project is licensed under the **MIT** License, read [License](LICENSE) for more information.
