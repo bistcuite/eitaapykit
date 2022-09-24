@@ -5,7 +5,7 @@ Unofficial toolkit for [Eitaa](https://eitaa.com/) messenger.
 [![Downloads](https://pepy.tech/badge/eitaa)](https://pepy.tech/project/eitaa)
 ![license](https://img.shields.io/badge/license-MIT-green)
 
-## Install via pip
+## Installation
 ```
 pip install eitaa
 ```
