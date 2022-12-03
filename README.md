@@ -1,3 +1,5 @@
+> eitaapykit is deprecated.
+
 # Eitaa Python Toolkit
 Unofficial toolkit for [Eitaa](https://eitaa.com/) messenger.
 
