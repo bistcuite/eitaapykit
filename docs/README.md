@@ -1,6 +1,12 @@
 # EitaaPyKit Documentation
 **EitaaPyKit** is a Python package that allows you to easily interact with the Eitaa Messenger API.
 
+- [`Eitaa` base class](#eitaa-base-class)
+- [Send a message](#send-a-message)
+- [Send a file](#send-a-file)
+- [Get channel or user details](#get-channel-or-user-details)
+- [Get trending hashtags](#get-trending-hashtags)
+
 **NOTE** : You must assign the [@sender user](https://eitaa.com/sender) as **manager** of your chat before sending messages/files in groups and channels. 
 
 ## `Eitaa` base class
@@ -13,6 +19,43 @@ from eitaa import Eitaa
 token = "your eitaayar.ir token"
 e = Eitaa(token)
 ```
+
+## Send a message
+You can use `send_message` method in `Eitaa` base class to send message to your chats.
+
+parameters :
+- `chat_id` : Your chat id(if your chat is a channel, set it to channel ID(without `@`) or the channel's invite link, and if your chat is a group, set it to the group's invite link).
+- `text : str` : Text to send.
+- `pin : bool`(optional) : If you want to pin message in chat, set it to `True`(default is `False`).
+- `view_to_delete : int`(optional) : Once the message has been viewed by the specified number of users, it will be removed. 
+- `disable_notification : bool`(optional): By default, notification will not be sent to subscribers unless the field is set to `True`. 
+- `reply_to_message_id : int`(optional): If you wish for your message to be a reply to another one, include the ID of that message when sending it. 
+
+Example :
+```py
+print(e.send_message("chat id","message text",pin=True)
+```
+
+The response is a json that has data relating to the sent message. If the `ok` field in the json is `True`, then the message was sent without any issues; if not, then it wasn't and an explanation can be found in the `description` field. 
+
+## Send a file
+To send a file to your chat, you can use `send_file` function in `Eitaa` base class.
+
+
+parameters :
+- `chat_id` : Your chat id(if your chat is a channel, set it to channel ID(without `@`) or the channel's invite link, and if your chat is a group, set it to the group's invite link).
+- `file : str`: The location of the file you want to share in the chat.
+- `pin : bool`(optional) : If you want to pin message in chat, set it to `True`(default is `False`).
+- `view_to_delete : int`(optional) : Once the message has been viewed by the specified number of users, it will be removed. 
+- `disable_notification : bool`(optional): By default, notification will not be sent to subscribers unless the field is set to `True`. 
+- `reply_to_message_id : int`(optional): If you wish for your message to be a reply to another one, include the ID of that message when sending it. 
+
+Example :
+```py
+print(e.send_file("chat id","caption","README.txt",pin=True)
+```
+
+The response is a json that has data relating to the sent file. If the `ok` field in the json is `True`, then the file was sent without any issues; if not, then it wasn't and an explanation can be found in the `description` field. 
 
 ## Get channel or user details
 The `get_info` method, which is a static method, can be used to obtain information about a channel or user. There's no need to create an instance of the `Eitaa` class as this method will return a json with some fields:
@@ -75,40 +118,3 @@ Example output:
     ...
 }
 ```
-
-## Send a message
-You can use `send_message` method in `Eitaa` base class to send message to your chats.
-
-parameters :
-- `chat_id` : Your chat id(if your chat is a channel, set it to channel ID(without `@`) or the channel's invite link, and if your chat is a group, set it to the group's invite link).
-- `text : str` : Text to send.
-- `pin : bool`(optional) : If you want to pin message in chat, set it to `True`(default is `False`).
-- `view_to_delete : int`(optional) : Once the message has been viewed by the specified number of users, it will be removed. 
-- `disable_notification : bool`(optional): By default, notification will not be sent to subscribers unless the field is set to `True`. 
-- `reply_to_message_id : int`(optional): If you wish for your message to be a reply to another one, include the ID of that message when sending it. 
-
-Example :
-```py
-print(e.send_message("chat id","message text",pin=True)
-```
-
-The response is a json that has data relating to the sent message. If the `ok` field in the json is `True`, then the message was sent without any issues; if not, then it wasn't and an explanation can be found in the `description` field. 
-
-## Send a file
-To send a file to your chat, you can use `send_file` function in `Eitaa` base class.
-
-
-parameters :
-- `chat_id` : Your chat id(if your chat is a channel, set it to channel ID(without `@`) or the channel's invite link, and if your chat is a group, set it to the group's invite link).
-- `file : str`: The location of the file you want to share in the chat.
-- `pin : bool`(optional) : If you want to pin message in chat, set it to `True`(default is `False`).
-- `view_to_delete : int`(optional) : Once the message has been viewed by the specified number of users, it will be removed. 
-- `disable_notification : bool`(optional): By default, notification will not be sent to subscribers unless the field is set to `True`. 
-- `reply_to_message_id : int`(optional): If you wish for your message to be a reply to another one, include the ID of that message when sending it. 
-
-Example :
-```py
-print(e.send_file("chat id","caption","README.txt",pin=True)
-```
-
-The response is a json that has data relating to the sent file. If the `ok` field in the json is `True`, then the file was sent without any issues; if not, then it wasn't and an explanation can be found in the `description` field. 
