@@ -35,7 +35,30 @@ class Eitaa(object):
             'is_verified' : is_verified,
         }
         return result
-        
+    
+    @staticmethod
+    def get_latest_messages(channel_id):
+        r = requests.get(f"https://eitaa.com/{channel_id}")
+        soup = BeautifulSoup(r.text, 'html.parser')
+        pure_messages = soup.find_all('div',attrs={'class':'etme_widget_message_bubble'})
+        messages = []
+
+        for message in pure_messages :
+            image_link = soup.find('a',attrs={'class':'etme_widget_message_photo_wrap'})['style']
+            image_link = image_link.split('url(\'')[1][:-2]
+            
+            message_text = soup.find('div',attrs={'class':'etme_widget_message_text'}).text
+            views = soup.find('span',attrs={'class':'etme_widget_message_views'}).text.replace('میلیون','M')
+            time = soup.find('span',attrs={'class':'etme_widget_message_meta'}).text
+
+            messages.append({
+                'image_link' : image_link,
+                'text' : message_text,
+                'views' : views,
+                'time' : time
+            })
+        print(len(messages))
+        return messages
     def send_message(self, chat_id, text, pin=False, view_to_delete=-1,
                     disable_notification=False, reply_to_message_id=None):
         r = requests.post(

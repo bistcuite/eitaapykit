@@ -1,3 +1,3 @@
 import eitaa
 
-print(eitaa.Eitaa.get_info("kaspi_elec"))
+print(eitaa.Eitaa.get_some_messages('eitaa'))
