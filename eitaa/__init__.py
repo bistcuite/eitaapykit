@@ -8,11 +8,6 @@ class Eitaa(object):
     def __init__(self, token):
         self.token = token
     
-    # دریافت اطلاعات صاحب توکن
-    def get_my_info(self):
-        r = requests.get(f"https://eitaayar.ir/api/{self.token}/getMe")
-        return r.json()["result"]
-    
     # دریافت اطلاعات یک کانال یا حساب کاربری
     @staticmethod
     def get_info(channel_id):

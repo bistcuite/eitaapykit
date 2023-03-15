@@ -14,7 +14,7 @@ token = "your eitaayar.ir token"
 e = Eitaa(token)
 ```
 
-## Get channel details
+## Get channel or user details
 To get details about a channel use `get_info` method.
 `get_info` method is a static method, you can call it without creating an instance of `Eitaa` class and it will return a json that contains 4 fields:
 - `name` : name of channel
