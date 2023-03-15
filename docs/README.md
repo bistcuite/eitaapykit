@@ -84,33 +84,31 @@ parameters :
 - `text : str` : Text to send.
 - `pin : bool`(optional) : If you want to pin message in chat, set it to `True`(default is `False`).
 - `view_to_delete : int`(optional) : Once the message has been viewed by the specified number of users, it will be removed. 
-- `disable_notification : bool`(optional): if it is `True`, notification will not send to subscribers(default `False`).
-- `reply_to_message_id : int`(optional): If you want the message you send to be in response to another message, specify the ID of that message with this parameter.
+- `disable_notification : bool`(optional): By default, notification will not be sent to subscribers unless the field is set to `True`. 
+- `reply_to_message_id : int`(optional): If you wish for your message to be a reply to another one, include the ID of that message when sending it. 
 
 Example :
 ```py
 print(e.send_message("chat id","message text",pin=True)
 ```
 
-It returns a json that contains some information about your sent message.
-If `ok` field in json is `True`, message sent successfully, else message not sent and you can get error message in `description` field.
+The response is a json that has data relating to the sent message. If the `ok` field in the json is `True`, then the message was sent without any issues; if not, then it wasn't and an explanation can be found in the `description` field. 
 
 ## Send a file
 To send a file to your chat, you can use `send_file` function in `Eitaa` base class.
 
-params :
-- `chat_id : str` : your chat id(if your chat is a channel, set it to channel id(without `@` or channel's invite link), and if your chat is a group, set it to your group's invite link)
-- `caption : str` : caption of your file(similar to `text` in `send_message` function)
-- `file : str`: path of your file to send to chat.
-- `pin : bool`(optional) : if you want to pin file in chat, set it to `True`(default `False`).
-- `view_to_delete : int`(optional) : When the number of views of the file by users reaches this number, the file will be deleted
-- `disable_notification : bool`(boolean, optional): if it is `True`, notification will not send to subscribers(default `False`).
-- `reply_to_message_id : int`(optional): If you want the message you send to be in response to another message, specify the ID of that message with this parameter.
+
+parameters :
+- `chat_id` : Your chat id(if your chat is a channel, set it to channel ID(without `@`) or the channel's invite link, and if your chat is a group, set it to the group's invite link).
+- `file : str`: The location of the file you want to share in the chat.
+- `pin : bool`(optional) : If you want to pin message in chat, set it to `True`(default is `False`).
+- `view_to_delete : int`(optional) : Once the message has been viewed by the specified number of users, it will be removed. 
+- `disable_notification : bool`(optional): By default, notification will not be sent to subscribers unless the field is set to `True`. 
+- `reply_to_message_id : int`(optional): If you wish for your message to be a reply to another one, include the ID of that message when sending it. 
 
 Example :
 ```py
 print(e.send_file("chat id","caption","README.txt",pin=True)
 ```
 
-It returns a json that contains some information about your sent file.
-If `ok` field in json is `True`, message sent successfully, else message not sent and you can get error message in `description` field.
+The response is a json that has data relating to the sent file. If the `ok` field in the json is `True`, then the file was sent without any issues; if not, then it wasn't and an explanation can be found in the `description` field. 
