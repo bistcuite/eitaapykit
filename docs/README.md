@@ -77,13 +77,13 @@ Example output:
 ```
 
 ## Send a message
-To send a meesage to your chat, you can use `send_message` function in `Eitaa` base class.
+You can use `send_message` method in `Eitaa` base class to send message to your chats.
 
-params :
-- `chat_id` : your chat id(if your chat is a channel, set it to channel id(without `@`) or channel's invite link, and if your chat is a group, set it to your group's invite link).
-- `text : str`(: text to send.
-- `pin : bool`(optional) : if you want to pin file in chat, set it to `True`(default `False`).
-- `view_to_delete : int`(optional) : When the number of views of the message by users reaches this number, the message will be deleted.
+parameters :
+- `chat_id` : Your chat id(if your chat is a channel, set it to channel ID(without `@`) or the channel's invite link, and if your chat is a group, set it to the group's invite link).
+- `text : str` : Text to send.
+- `pin : bool`(optional) : If you want to pin message in chat, set it to `True`(default is `False`).
+- `view_to_delete : int`(optional) : Once the message has been viewed by the specified number of users, it will be removed. 
 - `disable_notification : bool`(optional): if it is `True`, notification will not send to subscribers(default `False`).
 - `reply_to_message_id : int`(optional): If you want the message you send to be in response to another message, specify the ID of that message with this parameter.
 
