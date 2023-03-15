@@ -18,10 +18,10 @@ e = Eitaa(token)
 The `get_info` method, which is a static method, can be used to obtain information about a channel or user. There's no need to create an instance of the `Eitaa` class as this method will return a json with some fields:
 - `name` : Name of assigned ID
 - `image_url` : Image url of assigned ID
-- `is_verified` : If the ID that has been assigned is from a verified source, the field will be `True`. 
+- `is_verified` : If the ID that has been assigned is from a verified perosn or organization, the field will be `True`. 
+- `is_channel` : If the ID that has been assigned is a channel, the field will be `True`.
 - `users` : The field will include users count of channel, if the ID that has been assigned is for a channel. 
 - `description` : The field will include description of the channel, if the ID that has been assigned is for a channel. 
-
 Example :
 ```py
 from eitaa import Eitaa
@@ -35,18 +35,18 @@ Output :
     "name": "راهنمای جامع ایتا", 
     "image_url": "https://eitaa.com/download_1fff7493233f78741ae82ff2e83f4147?token=78da014400bbff1000000054736578573f60af5925007362aa77fae780889df2c9916e8d8daeadd850a160ce252a0063e84c6c7e2808b0fb929fae09d99f4175f862eb20d1aa840ed17b2602d5201f", 
     "users": "205.9K", 
-    "description": "پاسخ به پرسش\u200cهای متداول کاربران ایتا\n\nپشتیبانی کاربران:\n@support\n\nکانال اطلاع\u200cرسانی رسمی:\n@eitaa\n\nوبسایت رسمی برنامه:\nhttps://eitaa.com", "is_verified": True,
-    "is_channel": True
+    "description": "پاسخ به پرسش\u200cهای متداول کاربران ایتا\n\nپشتیبانی کاربران:\n@support\n\nکانال اطلاع\u200cرسانی رسمی:\n@eitaa\n\nوبسایت رسمی برنامه:\nhttps://eitaa.com", "is_verified": true,
+    "is_channel": true
 }
 ```
 
 ## Get trending hashtags
-You can get trending hashtags with `get_trends` method.
-`get_trends` method is a static method, you can call it without creating an instance of `Eitaa` class and it will return a json that contains 4 fields:
-- `last_12_hours` - last 12 hours hashtags(list of dicts that contains `name` and `count` fields)
-- `last_24_hours` - last 24 hours hashtags(list of dicts that contains `name` and `count` fields)
-- `last_7_days` - last 7 days hashtags(list of dicts that contains `name` and `count` fields)
-- `last_30_days` - last 30 days hashtags(list of dicts that contains `name` and `count` fields)
+The `get_trends` method, which is a static method, can be used to get trending hashtags. There's no need to create an instance of the `Eitaa` class as this method will return a json with four fields:
+
+- `last_12_hours` - Last 12 hours hashtags(list of dicts that contains `name` and `count` fields)
+- `last_24_hours` - Last 24 hours hashtags(list of dicts that contains `name` and `count` fields)
+- `last_7_days` - Last 7 days hashtags(list of dicts that contains `name` and `count` fields)
+- `last_30_days` - Last 30 days hashtags(list of dicts that contains `name` and `count` fields)
 
 Example :
 ```py
@@ -62,15 +62,17 @@ Example output:
         {"name": "#امام_حسین", "count": "+500"}, 
         {"name": "#امام_زمان", "count": "+500"}, 
         {"name": "#شب_جمعه", "count": "+400"}, 
-        {"name": "#کربلا", "count": "+300"}], 
+        {"name": "#کربلا", "count": "+300"}
+    ], 
     
     "last_24_hours": [
         {"name": "#اربعین", "count": "+3000"}, 
         {"name": "#امام_حسین", "count": "+1000"}, 
         {"name": "#امام_زمان", "count": "+700"}, 
         {"name": "#کربلا", "count": "+600"}, 
-        {"name": "#شب_جمعه", "count": "+400"}],
-...
+        {"name": "#شب_جمعه", "count": "+400"}
+    ],
+    ...
 }
 ```
 
