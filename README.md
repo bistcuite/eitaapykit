@@ -17,6 +17,12 @@ from eitaa import Eitaa
 print(Eitaa.get_info("eitta")) # "eitta" is a channel id
 ```
 
+Getting latest messages of a channel:
+```py
+from eitaa import Eitaa
+print(Eitaa.get_latest_messages('eitaa'))
+```
+
 Sending messages :
 ```py
 from eitaa import Eitaa

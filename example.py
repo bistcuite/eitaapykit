@@ -1,3 +1,3 @@
 import eitaa
 
-print(eitaa.Eitaa.get_some_messages('eitaa'))
+print(eitaa.Eitaa.get_latest_messages('eitaa'))
