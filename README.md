@@ -30,7 +30,7 @@ eitaa_obj = Eitaa("your eitaayar.ir token")
 print(eitaa_obj.send_message("chat id","message text",pin=True))
 ```
 
-Getting trending hashtags :
+Getting trends :
 ```py
 from eitaa import Eitaa
 trends = Eitaa.get_trends()
