@@ -1,10 +1,10 @@
-# Eitaa Python Toolkit Documentation
-Eitaa is a Python library that allows you to easily interact with the Eitaa API.
+# EitaaPyKit Documentation
+**EitaaPyKit** is a Python library that allows you to easily interact with the Eitaa Messenger API.
 
-**NOTE** : *to send messages\files in chats(groups and channels), at first you should add [@sender user](https://eitaa.com/sender) as **manager** in your chat.*
+**NOTE** : *to sending messages\files in chats(groups and channels), at first you should add [@sender user](https://eitaa.com/sender) as **manager** in your chat.*
 
 ## `Eitaa` base class
-To send messages and files in chats you should create an instance of `Eitaa` class.
+To send messages and files in chats you should create an instance from `Eitaa` class.
 
 It takes `token` as a parameter, you can get it from [Eitaayar.ir](https://eitaayar.ir/).
 
@@ -12,28 +12,6 @@ It takes `token` as a parameter, you can get it from [Eitaayar.ir](https://eitaa
 from eitaa import Eitaa
 token = "your eitaayar.ir token"
 e = Eitaa(token)
-```
-
-## Get my user account information
-`get_my_info` returns your user account information.
-
-Example:
-```py
-from eitaa import Eitaa
-token = "your eitaayar.ir token"
-e = Eitaa(token)
-print(e.get_my_info())
-```
-
-Example output :
-```json
-{
-    "id": 112233,
-    "is_bot": true,
-    "first_name": "ایتایار",
-    "last_name": "eitaayar",
-    "username": "sender",
-}
 ```
 
 ## Get channel details
