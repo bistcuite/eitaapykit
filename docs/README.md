@@ -1,7 +1,7 @@
 # EitaaPyKit Documentation
 **EitaaPyKit** is a Python package that allows you to easily interact with the Eitaa Messenger API.
 
-**NOTE** : *You must assign the [@sender user](https://eitaa.com/sender) as **manager** of your chat before sending messages/files in groups and channels. 
+**NOTE** : You must assign the [@sender user](https://eitaa.com/sender) as **manager** of your chat before sending messages/files in groups and channels. 
 
 ## `Eitaa` base class
 To send messages and files in chats you should create an instance from `Eitaa` class.
@@ -30,7 +30,7 @@ print(info)
 ```
 
 Output :
-```
+```json
 {
     'name': 'راهنمای جامع ایتا', 
     'image_url': 'https://eitaa.com/download_1fff7493233f78741ae82ff2e83f4147?token=78da014400bbff1000000054736578573f60af5925007362aa77fae780889df2c9916e8d8daeadd850a160ce252a0063e84c6c7e2808b0fb929fae09d99f4175f862eb20d1aa840ed17b2602d5201f', 
