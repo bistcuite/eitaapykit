@@ -3,11 +3,22 @@
 
 **NOTE** : You must assign the [@sender user](https://eitaa.com/sender) as **manager** of your chat before sending messages/files in groups and channels. 
 
+- [Installation](#installation)
 - [`Eitaa` base class](#eitaa-base-class)
 - [Send a message](#send-a-message)
 - [Send a file](#send-a-file)
 - [Get channel or user details](#get-channel-or-user-details)
 - [Get trending hashtags](#get-trending-hashtags)
+
+## Installation
+You can install latest release of eitaapykit from PyPI with following command :
+```
+pip install eitaa
+```
+Also you can install in-development version with following command :
+```
+pip install git+https://github.com/bistcuite/eitaapykit.git
+```
 
 ## `Eitaa` base class
 To send messages and files in chats you should create an instance from `Eitaa` class.
