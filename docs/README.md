@@ -1,7 +1,7 @@
 # EitaaPyKit Documentation
-**EitaaPyKit** is a Python library that allows you to easily interact with the Eitaa Messenger API.
+**EitaaPyKit** is a Python package that allows you to easily interact with the Eitaa Messenger API.
 
-**NOTE** : *to sending messages\files in chats(groups and channels), at first you should add [@sender user](https://eitaa.com/sender) as **manager** in your chat.*
+**NOTE** : *You must assign the [@sender user](https://eitaa.com/sender) as **manager** of your chat before sending messages/files in groups and channels. 
 
 ## `Eitaa` base class
 To send messages and files in chats you should create an instance from `Eitaa` class.
@@ -15,12 +15,12 @@ e = Eitaa(token)
 ```
 
 ## Get channel or user details
-To get details about a channel use `get_info` method.
-`get_info` method is a static method, you can call it without creating an instance of `Eitaa` class and it will return a json that contains 4 fields:
-- `name` : name of channel
-- `image_url` : url of channel's profile
-- `users` : subscribers cout
-- `desc` : channel description
+The `get_info` method, which is a static method, can be used to obtain information about a channel or user. There's no need to create an instance of the `Eitaa` class as this method will return a json with some fields:
+- `name` : Name of assigned ID
+- `image_url` : Image url of assigned ID
+- `is_verified` : If the ID that has been assigned is from a verified source, the field will be `True`. 
+- `users` : The field will include users count of channel, if the ID that has been assigned is for a channel. 
+- `description` : The field will include description of the channel, if the ID that has been assigned is for a channel. 
 
 Example :
 ```py
@@ -33,9 +33,10 @@ Output :
 ```
 {
     'name': 'راهنمای جامع ایتا', 
-    'image_url': 'https://eitaa.com/assets/images/logos/channel.png', 
-    'users': '138798', 
-    'desc': 'پاسخ به پرسش\u200cهای متداول کاربران ایتا\n\nپشتیبانی کاربران:\n@support\n\nکانال اطلاع\u200cرسانی رسمی:\n@eitaa\n\nوبسایت رسمی برنامه:\nhttps://eitaa.com'
+    'image_url': 'https://eitaa.com/download_1fff7493233f78741ae82ff2e83f4147?token=78da014400bbff1000000054736578573f60af5925007362aa77fae780889df2c9916e8d8daeadd850a160ce252a0063e84c6c7e2808b0fb929fae09d99f4175f862eb20d1aa840ed17b2602d5201f', 
+    'users': '205.9K', 
+    'description': 'پاسخ به پرسش\u200cهای متداول کاربران ایتا\n\nپشتیبانی کاربران:\n@support\n\nکانال اطلاع\u200cرسانی رسمی:\n@eitaa\n\nوبسایت رسمی برنامه:\nhttps://eitaa.com', 'is_verified': True,
+    'is_channel': True
 }
 ```
 

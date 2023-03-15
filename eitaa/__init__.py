@@ -29,7 +29,7 @@ class Eitaa(object):
                 'is_verified' : is_verified,
                 'is_channel' : False,
                 'users' : None,
-                'desc' : None,
+                'description' : None,
             }
         else :
             channel_name = soup.find('div', attrs = {'class':'etme_channel_info_header_title'}).find('span').text
@@ -38,7 +38,7 @@ class Eitaa(object):
 
             users_count = soup.find('span', attrs = {'class':'counter_value'}).text.replace('هزار','K')
             
-            desc = soup.find('div', attrs = {'class':'etme_channel_info_description'}).text.replace('\\u200c',' ')
+            description = soup.find('div', attrs = {'class':'etme_channel_info_description'}).text.replace('\\u200c',' ')
 
             is_verified = bool(len(soup.find_all('i',attrs={'class' : 'verified-icon'})))
 
@@ -46,7 +46,7 @@ class Eitaa(object):
                 'name' : " ".join(channel_name.split()),
                 'image_url' : channel_image_url,
                 'users' : users_count,
-                'desc' : desc,
+                'description' : description,
                 'is_verified' : is_verified,
                 'is_channel' : True,
             }
