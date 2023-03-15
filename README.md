@@ -6,8 +6,13 @@ Unofficial toolkit for [Eitaa](https://eitaa.com/) messenger.
 ![license](https://img.shields.io/badge/license-MIT-green)
 
 ## Installation
+Installing latest published release :
 ```
 pip install eitaa
+```
+Install in-development version :
+```
+pip install git+https://github.com/bistcuite/eitaapykit.git
 ```
 
 ## Example
