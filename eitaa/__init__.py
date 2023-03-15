@@ -16,19 +16,23 @@ class Eitaa(object):
     def get_info(channel_id):
         r = requests.get(f"https://eitaa.com/{channel_id}")
         soup = BeautifulSoup(r.text, 'html.parser')
-                
-        channel_name = soup.find('div', attrs = {'class':'tgme_page_title'}).text
-            
-        channel_image_url = "https://eitaa.com" + soup.find('img', attrs = {'class':'tgme_page_photo_image'})['src'] 
 
-        users_count = (str(soup.find('div', attrs = {'style':'display: block;text-align: center;font-weight: bold'}).text).split(' '))[0]
-        desc = soup.find('div', attrs = {'class':'text-center'}).text 
+        channel_name = soup.find('div', attrs = {'class':'etme_channel_info_header_title'}).find('span').text
+        
+        channel_image_url = soup.find('i', attrs = {'class':'etme_page_photo_image'}).find('img')['src']
+
+        users_count = soup.find('span', attrs = {'class':'counter_value'}).text.replace('هزار','K')
+        
+        desc = soup.find('div', attrs = {'class':'etme_channel_info_description'}).text.replace('\\u200c',' ')
+
+        is_verified = bool(len(soup.find_all('i',attrs={'class' : 'verified-icon'})))
 
         result = {
             'name' : " ".join(channel_name.split()),
             'image_url' : channel_image_url,
             'users' : users_count,
             'desc' : desc,
+            'is_verified' : is_verified,
         }
         return result
         
