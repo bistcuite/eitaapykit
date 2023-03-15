@@ -8,6 +8,8 @@
 - [Send a message](#send-a-message)
 - [Send a file](#send-a-file)
 - [Get channel or user details](#get-channel-or-user-details)
+- [Get latest messages of a channel]
+
 - [Get trending hashtags](#get-trending-hashtags)
 
 ## Installation
@@ -92,6 +94,20 @@ Output :
     "description": "پاسخ به پرسش\u200cهای متداول کاربران ایتا\n\nپشتیبانی کاربران:\n@support\n\nکانال اطلاع\u200cرسانی رسمی:\n@eitaa\n\nوبسایت رسمی برنامه:\nhttps://eitaa.com", "is_verified": true,
     "is_channel": true
 }
+```
+
+## Get latest messages of a channel
+The `get_latest_messages` method, which is a static method, can be used to get latest messages of a channel. There's no need to create an instance of the `Eitaa` class as this method will return a list of jsons.
+Any json member of returned list has four fields :
+- `text` : Message text
+- `image_link` : Url of message image
+- `views` : Number of views
+- `time` : When the message is sent
+
+Example :
+```py
+from eitaa import Eitaa
+messages = Eitaa.get_latest_messages('eitaa_faq')
 ```
 
 ## Get trending hashtags
