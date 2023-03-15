@@ -43,10 +43,10 @@ Output :
 ## Get trending hashtags
 The `get_trends` method, which is a static method, can be used to get trending hashtags. There's no need to create an instance of the `Eitaa` class as this method will return a json with four fields:
 
-- `last_12_hours` - Last 12 hours hashtags(list of dicts that contains `name` and `count` fields)
-- `last_24_hours` - Last 24 hours hashtags(list of dicts that contains `name` and `count` fields)
-- `last_7_days` - Last 7 days hashtags(list of dicts that contains `name` and `count` fields)
-- `last_30_days` - Last 30 days hashtags(list of dicts that contains `name` and `count` fields)
+- `last_12_hours` - Last 12 hours hashtags(list of dictionaries that contains `name` and `count` fields)
+- `last_24_hours` - Last 24 hours hashtags(list of dictionaries that contains `name` and `count` fields)
+- `last_7_days` - Last 7 days hashtags(list of dictionaries that contains `name` and `count` fields)
+- `last_30_days` - Last 30 days hashtags(list of dictionaries that contains `name` and `count` fields)
 
 Example :
 ```py
