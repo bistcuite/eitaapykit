@@ -159,8 +159,6 @@ class Eitaa(object):
     # ارسال فایل از طریق ایتایار
     def send_file(self, chat_id, caption, file, pin=False, view_to_delete=-1,
                 disable_notification=False, reply_to_message_id=None):
-        if not isfile(file):
-            raise Exception(f"File `{file}` not found")
 
         r = requests.post(
             f"https://eitaayar.ir/api/{self.token}/sendFile",
