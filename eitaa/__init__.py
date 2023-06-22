@@ -173,7 +173,7 @@ class Eitaa(object):
                 'reply_to_message_id' : reply_to_message_id if reply_to_message_id != None else '',
             },
             files={
-                'file': open(file, 'rb'),
+                'file': file,
             }
         )
         return r.json()
