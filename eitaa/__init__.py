@@ -60,21 +60,42 @@ class Eitaa(object):
         pure_messages = soup.find_all('div',attrs={'class':'etme_widget_message_bubble'})
         messages = []
 
-        for message in pure_messages :
-            image_link = soup.find('a',attrs={'class':'etme_widget_message_photo_wrap'})['style']
-            image_link = image_link.split('url(\'')[1][:-2]
-            
-            message_text = soup.find('div',attrs={'class':'etme_widget_message_text'}).text
-            views = soup.find('span',attrs={'class':'etme_widget_message_views'}).text.replace('میلیون','M')
-            time = soup.find('span',attrs={'class':'etme_widget_message_meta'}).text
 
+        for message in pure_messages:
+            message_text = message.find('div', class_='etme_widget_message_text').text.strip()
+            views_element = message.find('span', class_='etme_widget_message_views')
+            
+            views = views_element.text.strip() if views_element else "Views not available"
+            image_link = message.find('a', attrs={'class': 'etme_widget_message_photo_wrap'})
+
+
+            image_url = ""
+            if image_link:
+                image_link = image_link['style']
+
+                import re
+                url_match = re.search(r"url\('([^']+)'\)", image_link)
+                if url_match:
+                    image_url = url_match.group(1)
+                else:
+                    print("Image URL not found")
+            else:
+                print("Image link not available")
+            
+
+            time = message.find('span', class_='etme_widget_message_meta').text 
+            
             messages.append({
-                'image_link' : image_link,
-                'text' : message_text,
-                'views' : views,
-                'time' : time
+                'image_link': f"https://eitaa.com/{image_url}",
+                'text': message_text,
+                'views': views,
+                'time': time
             })
         print(len(messages))
+
+
+        
+
         return messages
     
     # دریافت آخرین هشتگ های ترند شده در ایتا
@@ -140,7 +161,7 @@ class Eitaa(object):
         return result
     
     # ارسال پیام متنی از طریق ایتایار
-    def send_message(self, chat_id, text, pin=False, view_to_delete=-1,
+    def send_message(self, chat_id, text, pin=False,date=None, view_to_delete=-1,
                     disable_notification=False, reply_to_message_id=None):
         r = requests.post(
             f"https://eitaayar.ir/api/{self.token}/sendMessage",
@@ -148,6 +169,7 @@ class Eitaa(object):
                 'chat_id': chat_id,
                 'text': text,
                 'pin': int(pin),
+                'date': date,
                 'viewCountForDelete': view_to_delete,
                 'disable_notification': int(disable_notification),
                 'reply_to_message_id' : reply_to_message_id if reply_to_message_id != None else '',
@@ -155,9 +177,18 @@ class Eitaa(object):
         )
         print(type(r.json()))
         return r.json()
+        
+    def delete_message(self, chat_id, message_id):
+        r = requests.post(
+            f"https://eitaayar.ir/api/{self.token}/deleteMessage",
+            data={
+                'chat_id': chat_id,
+                'message_id': message_id,
+            }
+        )
 
     # ارسال فایل از طریق ایتایار
-    def send_file(self, chat_id, caption, file, pin=False, view_to_delete=-1,
+    def send_file(self, chat_id, caption, file, pin=False,date=None, view_to_delete=-1,
                 disable_notification=False, reply_to_message_id=None):
         if not isfile(file):
             raise Exception(f"File `{file}` not found")
@@ -168,6 +199,7 @@ class Eitaa(object):
                 'chat_id': chat_id,
                 'caption': caption,
                 'pin': int(pin),
+                'date':date,
                 'viewCountForDelete': view_to_delete,
                 'disable_notification': int(disable_notification),
                 'reply_to_message_id' : reply_to_message_id if reply_to_message_id != None else '',
