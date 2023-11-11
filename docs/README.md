@@ -7,7 +7,7 @@
 - [`Eitaa` base class](#eitaa-base-class)
 - [Send a message](#send-a-message)
 - [Send a file](#send-a-file)
-- [Get channel or user details](#get-channel-or-user-details)
+- [Get channel or user details](#get-latest-messages-of-a-channel)
 - [Get latest messages of a channel]
 
 - [Get trending hashtags](#get-trending-hashtags)
@@ -43,6 +43,7 @@ parameters :
 - `view_to_delete : int`(optional) : Once the message has been viewed by the specified number of users, it will be removed. 
 - `disable_notification : bool`(optional): By default, notification will not be sent to subscribers unless the field is set to `True`. 
 - `reply_to_message_id : int`(optional): If you wish for your message to be a reply to another one, include the ID of that message when sending it. 
+- `date`(optional) : Unix Timestamp formated date to schelude sending message.
 
 Example :
 ```py
@@ -62,6 +63,7 @@ parameters :
 - `view_to_delete : int`(optional) : Once the message has been viewed by the specified number of users, it will be removed. 
 - `disable_notification : bool`(optional): By default, notification will not be sent to subscribers unless the field is set to `True`. 
 - `reply_to_message_id : int`(optional): If you wish for your message to be a reply to another one, include the ID of that message when sending it. 
+- `date`(optional) : Unix Timestamp formated date to schelude sending message.
 
 Example :
 ```py
