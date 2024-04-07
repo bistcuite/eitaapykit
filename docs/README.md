@@ -85,14 +85,11 @@ The function returns a JSON response containing information about the sent messa
     - `False`: The message failed to send.
 - `description` field (string, optional): (Only present if `ok` is `False`) This field provides an explanation for the message sending failure.
 
-## Get channel or user details
-The `get_info` method, which is a static method, can be used to obtain information about a channel or user. There's no need to create an instance of the `Eitaa` class as this method will return a json with some fields:
-- `name` : Name of assigned ID
-- `image_url` : Image url of assigned ID
-- `is_verified` : If the ID that has been assigned is from a verified perosn or organization, the field will be `True`. 
-- `is_channel` : If the ID that has been assigned is a channel, the field will be `True`.
-- `users` : The field will include users count of channel, if the ID that has been assigned is for a channel. 
-- `description` : The field will include description of the channel, if the ID that has been assigned is for a channel. 
+## Retrieving Channel or User Information
+This section details how to obtain information about channels and users in Eitaa using `get_info` function in `Eitaa` base class.
+
+- `channel_or_user_id: str`: The unique identifier for the channel or user.
+
 Example :
 ```py
 from eitaa import Eitaa
