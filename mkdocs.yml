@@ -1,0 +1,27 @@
+site_name: کیت پایتونی ایتا
+
+theme:
+  name: 'material'
+  language: 'fa'
+  direction: 'rtl'
+  palette:
+    primary: 'orange'
+    accent: 'orange'
+  font: false
+  feature:
+    tabs: false
+  extra:
+    social:
+      - type: 'github'
+        link: 'https://github.com/bistcuite'    
+
+extra_css:
+  - 'stylesheets/extra.css'
+
+nav:
+- مستندات: 'index.md'
+- مخزن گیت‌هاب: 'https://github.com/bistcuite/eitaapykit'
+- PyPI: 'https://pypi.org/project/eitaa'
+- سایت ایتایار: 'https://eitaayar.ir'
+- وبسایت رسمی ایتا: 'https://eitaa.com'
+- نسخۀ وب ایتا: 'https://web.eitaa.com'
