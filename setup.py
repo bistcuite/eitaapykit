@@ -2,7 +2,7 @@ from distutils.core import setup
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
-    
+
 setup(
     name='eitaa',
     version='2.1.2',
