@@ -37,20 +37,26 @@ e = Eitaa(token)
 To send messages to your chats, you can use the `send_message` method in the `Eitaa` base class.
 
 parameters :
-- `chat_id` : The chat id (if your chat is a channel, set the channel ID without `@` or the group's invite link if it's a group). 
-- `text : str` : Text to send.
-- `pin : bool`(optional) : If you want to pin message in chat, set it to `True`(default is `False`).
-- `view_to_delete : int`(optional) : Once the message has been viewed by the specified number of users, it will be removed. 
-- `disable_notification : bool`(optional): By default, notification will not be sent to subscribers unless the field is set to `True`. 
-- `reply_to_message_id : int`(optional): If you wish for your message to be a reply to another one, include the ID of that message when sending it. 
-- `date`(optional) : Unix Timestamp formated date to schelude sending message.
+- `chat_id` : The unique identifier for the chat.
+    - For channels, use the channel ID without the `@` symbol.
+    - For groups, use the group's invite link.
+- `text : str` : The message content you want to send.
+- `pin : bool`(optional) : Set to `True` to pin the message in the chat. Defaults to `False`.
+- `view_to_delete : int`(optional) : Schedule the message to be deleted after a certain number of users have viewed it.
+- `disable_notification : bool`(optional): Set to `True` to silence notifications for the message. Defaults to `False`.
+- `reply_to_message_id : int`(optional): The ID of another message if you want to reply to it.
+- `date`(optional) : A Unix timestamp specifying a scheduled sending time.
 
 Example :
 ```py
 print(e.send_message("chat id","message text",pin=True)
 ```
 
-The response is a json that has data relating to the sent message. If the `ok` field in the json is `True`, then the message was sent without any issues; if not, then it wasn't and an explanation can be found in the `description` field. 
+The function returns a JSON response containing information about the sent message. Here's how to interpret the response:
+- `ok` field (boolean):
+    - `True`: The message was sent successfully.
+    - `False`: The message failed to send.
+- `description` field (string, optional): (Only present if `ok` is `False`) This field provides an explanation for the message sending failure.
 
 ## Send a file
 To send a file to your chat, you can use `send_file` function in `Eitaa` base class.
