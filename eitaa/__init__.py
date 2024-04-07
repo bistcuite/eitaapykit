@@ -11,8 +11,8 @@ class Eitaa(object):
 
     # دریافت اطلاعات یک کانال یا حساب کاربری
     @staticmethod
-    def get_info(channel_id):
-        r = requests.get(f"https://eitaa.com/{channel_id}")
+    def get_info(channel_or_user_id):
+        r = requests.get(f"https://eitaa.com/{channel_or_user_id}")
         soup = BeautifulSoup(r.text, 'html.parser')
         result = {}
         # بررسی اینکه شناسه متعلق به یک کانال است یا حساب کاربری
