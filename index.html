@@ -1,0 +1,787 @@
+
+<!doctype html>
+<html lang="fa" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>کیت پایتونی ایتا</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api" class="md-skip">
+          پرش به محتویات
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="سرتیتر">
+    <a href="." title="کیت پایتونی ایتا" class="md-header__button md-logo" aria-label="کیت پایتونی ایتا" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            کیت پایتونی ایتا
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              مستندات
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="جستجو" placeholder="جستجو" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="جستجو">
+        
+        <button type="reset" class="md-search__icon md-icon" title="بازنشانی" aria-label="بازنشانی" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            راه‌اندازی جستجو
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="هدایت" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="کیت پایتونی ایتا" class="md-nav__button md-logo" aria-label="کیت پایتونی ایتا" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    کیت پایتونی ایتا
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    مستندات
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    مستندات
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      نصب
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eitaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      کلاس پایۀ Eitaa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ارسال پیغام
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ارسال فایل
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      دریافت اطلاعات یک کانال یا کاربر
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      دریافت آخرین پیام های یک کانال عمومی
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      دریافت هشتگ های ترندشده
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      خاتمه
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/bistcuite/eitaapykit" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    مخزن گیت‌هاب
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://pypi.org/project/eitaa" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyPI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://eitaayar.ir" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    سایت ایتایار
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://eitaa.com" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    وبسایت رسمی ایتا
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://web.eitaa.com" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    نسخۀ وب ایتا
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      نصب
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eitaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      کلاس پایۀ Eitaa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ارسال پیغام
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ارسال فایل
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      دریافت اطلاعات یک کانال یا کاربر
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      دریافت آخرین پیام های یک کانال عمومی
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      دریافت هشتگ های ترندشده
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      خاتمه
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="api">کیت کار با API ایتا در پایتون</h1>
+<p><strong>ایتاپای‌کیت</strong> یک ابزار غیررسمی به زبان پایتون است که راهکار هایی برای استفاده از API های این پیامرسان را ارائه می‌دهد.</p>
+<p><strong>نکته:</strong> برای آنکه بتوانید در کانال‌ها و گروه‌ها پیغام یا فایل ارسال کنید، قبل از هرکاری لازم است، کاربر <a href="https://eitaa.com/sender">@sender</a> را در کانال یا گروه خود به عنوان <strong>مدیر</strong> اضافه کنید.
+<strong>نکته:</strong> با توجه به آپدیت مداوم نسخه وب ایتا توسط شرکت سازنده ممکن است برخی از ویژگی های این کتابخانه موقتا از کار بیوفتد، اگر با چنین چیزی مواجه شدید، می‌توانید با <a href="https://github.com/bistcuite/eitaapykit/issues">ایجاد issue در مخزن گیت‌هاب</a>، ما را مطلع کنید تا هرچه سریع‌تر مشکل را برطرف سازیم.</p>
+<h2 id="_1">نصب</h2>
+<p>شما می‌توانید با دستور زیر آخرین نسخۀ eitaapykit را برای پایتون دریافت نمایید:</p>
+<pre><code>pip install eitaa
+</code></pre>
+<p>همچنین نسخه <em>درحال توسعه</em> نیز از طریق دستور زیر قابل نصب است:</p>
+<pre><code>pip install git+https://github.com/bistcuite/eitaapykit.git
+</code></pre>
+<h2 id="eitaa">کلاس پایۀ <code>Eitaa</code></h2>
+<p>برای اینکه بتوانید پیغام یا فایل ارسال کنید، لازم است ابتدا به صورت زیر یک نمونه(instance) از آن ایجاد کنید و سپس توکنی را که از سایت <a href="https://eitaayar.ir">ایتایار</a> دریافت کرده‌اید را به عنوان پارامتر به کلاس <code>Eitaa</code> بدهید:</p>
+<pre><code class="language-py">from eitaa import Eitaa
+token = &quot;your eitaayar.ir token&quot;
+e = Eitaa(token)
+</code></pre>
+<h2 id="_2">ارسال پیغام</h2>
+<p>برای ارسال پیغام(پیام به صورت متن) کافی است از متد <code>send_message</code> در کلاس <code>Eitaa</code> استفاده کنید.</p>
+<p>پارامتر های متد <code>send_message</code>:</p>
+<ul>
+<li><code>chat_id</code> : شناسۀ یکتای کانال یا گروه.</li>
+</ul>
+<p>- برای ارسال پیغام به کانال، کافی است آیدی کانال خود را بدون <code>@</code> به آن نسبت بدهید.</p>
+<p>- اگر کانال شما خصوصی است و یا قصد ارسال پیغام به یک گروه را دارید، کافی است لینک آن را نسبت بدهید.</p>
+<ul>
+<li>
+<p><code>text : str</code> : متن پیغامی که قصد ارسال آن را دارید.</p>
+</li>
+<li>
+<p><code>pin : bool</code>(اختیاری) : با تغییر آن به <code>True</code> پیغام ارسالی در چت پین می‌شود، به صورت پیشفرض <code>False</code> است.</p>
+</li>
+<li>
+<p><code>view_to_delete : int</code>(اختیاری) : اگر تعداد بازدید های پیغام به این عدد برسد، به صورت خودکار حذف خواهد شد.</p>
+</li>
+<li>
+<p><code>disable_notification : bool</code>(اختیاری): با تنظیم آن بر روی <code>True</code> هیچگونه اعلانی برای مخاطبان ارسال نمی‌شود، به صورت پیشفرض روی <code>False</code> تنظیم شده است.</p>
+</li>
+<li>
+<p><code>reply_to_message_id : int</code>(اختیاری): شناسۀ پیامی که  می‌خواهید پیغام بر روی آن پاسخ داده شود.</p>
+</li>
+<li>
+<p><code>date</code>(اختیاری) : فرمت زمانی Unix که می‌تواند زمانی در آینده را برای ارسال پیام مشخص کند.</p>
+</li>
+</ul>
+<p>مثال:</p>
+<pre><code class="language-py">print(e.send_message(&quot;chat id&quot;,&quot;message text&quot;,pin=True))
+</code></pre>
+<p>تابع یک پاسخ JSON حاوی اطلاعاتی در مورد پیام ارسال شده برمی گرداند که حاوی فیلد های زیر است:</p>
+<ul>
+<li><code>ok</code> (بولین):</li>
+</ul>
+<p>- <code>True</code>: به معنی این است پیغام با موفقیت ارسال شده است.</p>
+<p>- <code>False</code>: به معنی عدم موفقیت در ارسال پیام است.</p>
+<ul>
+<li><code>description</code> (رشته‌ای، اختیاری): (تنها در صورتی ظاهر می‌شود که فیلد <code>ok</code> برابر با <code>False</code> باشد) این فیلد توضیحی دربارۀ علت ارسال نشدن پیام ارائه می‌دهد.</li>
+</ul>
+<h2 id="_3">ارسال فایل</h2>
+<p>برای ارسال فایل به یک کانال یا گروه کافی است از متد <code>send_file</code> در کلاس <code>Eitaa</code> استفاده کنید.</p>
+<p>پارامتر های متد <code>send_file</code>:</p>
+<ul>
+<li><code>chat_id</code> : شناسۀ یکتای کانال یا گروه.</li>
+</ul>
+<p>- برای ارسال پیغام به کانال، کافی است آیدی کانال خود را بدون <code>@</code> به آن نسبت بدهید.</p>
+<p>- اگر کانال شما خصوصی است و یا قصد ارسال پیغام به یک گروه را دارید، کافی است لینک آن را نسبت بدهید.
+- <code>file: str</code>: مسیر فایلی که می‌خواهید ارسال کنید.
+- <code>text : str</code> : متن پیغامی که قصد ارسال آن را دارید.</p>
+<ul>
+<li>
+<p><code>pin : bool</code>(اختیاری) : با تغییر آن به <code>True</code> پیغام ارسالی در چت پین می‌شود، به صورت پیشفرض <code>False</code> است.</p>
+</li>
+<li>
+<p><code>view_to_delete : int</code>(اختیاری) : اگر تعداد بازدید های پیغام به این عدد برسد، به صورت خودکار حذف خواهد شد.</p>
+</li>
+<li>
+<p><code>disable_notification : bool</code>(اختیاری): با تنظیم آن بر روی <code>True</code> هیچگونه اعلانی برای مخاطبان ارسال نمی‌شود، به صورت پیشفرض روی <code>False</code> تنظیم شده است.</p>
+</li>
+<li>
+<p><code>reply_to_message_id : int</code>(اختیاری): شناسۀ پیامی که  می‌خواهید پیغام بر روی آن پاسخ داده شود.</p>
+</li>
+<li>
+<p><code>date</code>(اختیاری) : فرمت زمانی Unix که می‌تواند زمانی در آینده را برای ارسال پیام مشخص کند.</p>
+</li>
+</ul>
+<p>مثال:</p>
+<pre><code class="language-py">print(e.send_file(&quot;chat id&quot;,&quot;caption&quot;,&quot;README.txt&quot;,pin=True))
+</code></pre>
+<p>تابع یک پاسخ JSON حاوی اطلاعاتی در مورد پیام ارسال شده برمی گرداند که حاوی فیلد های زیر است:</p>
+<ul>
+<li><code>ok</code> (بولین):</li>
+</ul>
+<p>- <code>True</code>: به معنی این است پیغام با موفقیت ارسال شده است.</p>
+<p>- <code>False</code>: به معنی عدم موفقیت در ارسال پیام است.</p>
+<ul>
+<li><code>description</code> (رشته‌ای، اختیاری): (تنها در صورتی ظاهر می‌شود که فیلد <code>ok</code> برابر با <code>False</code> باشد) این فیلد توضیحی دربارۀ علت ارسال نشدن پیام ارائه می‌دهد.</li>
+</ul>
+<h2 id="_4">دریافت اطلاعات یک کانال یا کاربر</h2>
+<p>شما می‌توانید با استفاده از متد <code>get_info</code> اطلاعات عمومی یک کانال و یا کاربر را بدست بیاورید.</p>
+<p>پارامتر های متد <code>get_info</code> :
+- <code>channel_or_user_id: str</code>: شناسۀ عمومی کانال یا کاربر</p>
+<p>مثال:</p>
+<pre><code class="language-py">from eitaa import Eitaa
+info = Eitaa.get_info(&quot;eitaa_faq&quot;)
+print(info)
+</code></pre>
+<p>نمونه اطلاعات دریافتی:</p>
+<pre><code class="language-json">
+{
+
+    &quot;name&quot;: &quot;راهنمای جامع ایتا&quot;,
+
+    &quot;image_url&quot;: &quot;will contains a url&quot;,
+
+    &quot;users&quot;: &quot;205.9K&quot;,
+
+    &quot;description&quot;: &quot;پاسخ به پرسش\u200cهای متداول کاربران ایتا\n\nپشتیبانی کاربران:\n@support\n\nکانال اطلاع\u200cرسانی رسمی:\n@eitaa\n\nوبسایت رسمی برنامه:\nhttps://eitaa.com&quot;, &quot;is_verified&quot;: true,
+
+    &quot;is_channel&quot;: true
+
+}
+
+</code></pre>
+<h2 id="_5">دریافت آخرین پیام های یک کانال عمومی</h2>
+<p>متد <code>get_latest_messages</code> که یک متد ایستا(static method) است، می‌تواند برای دریافت چند پیام آخر یک کانال(معمولا ده پیام) استفاده شود. مقدار خروجی این متد یک لیست متشکل از <code>dict</code>هایی خواهد بود که هر یک حاوی اطلاعات هر پیام است و فیلد هایی به شکل زیر دارد:
+- <code>text</code> : متن پیام</p>
+<ul>
+<li>
+<p><code>image_link</code> : آدرس اینترنتی تصویر پیام(اگر پیام به صورت کاملا متنی باشد، خالی خواهد بود)</p>
+</li>
+<li>
+<p><code>views</code> : تعداد بازدید های پیام</p>
+</li>
+<li>
+<p><code>iso_time</code> : زمان ارسال پیام به فرمت ISO</p>
+</li>
+<li>
+<p><code>message_number</code>: شمارۀ پیام
+مثال:</p>
+</li>
+</ul>
+<pre><code class="language-py">from eitaa import Eitaa
+messages = Eitaa.get_latest_messages('eitaa_faq')
+</code></pre>
+<h2 id="_6">دریافت هشتگ های ترندشده</h2>
+<p>متد <code>get_trends</code> که یک متد ایستا(static method) در کلاس پایۀ <code>Eitaa</code> است، می‌تواند برای استخراج هشتگ های ترندشده در ایتا، در بازه های زمانی متفاوت استفاده شود. این متد یک لیست متشکل از چهار <code>dict</code> یا دیکشنری برمی‌گرداند:</p>
+<ul>
+<li>
+<p><code>last_12_hours</code>: لیست هشتگ های ترند شده در 12 ساعت گذشته همراه با تعداد هشتگ‌ها(که خودش متشکل از لیست از دیکشنری‌ها است که دارای دو فیلد <code>name</code> و <code>count</code> هستند، که شامل نام هشتگ و تعداد آن می‌شود).</p>
+</li>
+<li>
+<p><code>last_24_hours</code>: لیست هشتگ های ترند شده در 24 ساعت گذشته همراه با تعداد هشتگ‌ها(که خودش متشکل از لیست از دیکشنری‌ها است که دارای دو فیلد <code>name</code> و <code>count</code> هستند، که شامل نام هشتگ و تعداد آن می‌شود).</p>
+</li>
+<li>
+<p><code>last_7_days</code>: لیست هشتگ های ترند شده در 7 روز گذشته همراه با تعداد هشتگ‌ها(که خودش متشکل از لیست از دیکشنری‌ها است که دارای دو فیلد <code>name</code> و <code>count</code> هستند، که شامل نام هشتگ و تعداد آن می‌شود).</p>
+</li>
+<li>
+<p><code>last_30_days</code>: لیست هشتگ های ترند شده در 30 روز گذشته همراه با تعداد هشتگ‌ها(که خودش متشکل از لیست از دیکشنری‌ها است که دارای دو فیلد <code>name</code> و <code>count</code> هستند، که شامل نام هشتگ و تعداد آن می‌شود).</p>
+</li>
+</ul>
+<p>مثال:</p>
+<pre><code class="language-py">from eitaa import Eitaa
+trends = Eitaa.get_trends()
+</code></pre>
+<p>خروجی نمونه:</p>
+<pre><code class="language-json">
+{
+
+    &quot;last_12_hours&quot;: [
+
+        {&quot;name&quot;: &quot;#اربعین&quot;, &quot;count&quot;: &quot;+1500&quot;},
+
+        {&quot;name&quot;: &quot;#امام_حسین&quot;, &quot;count&quot;: &quot;+500&quot;},
+
+        {&quot;name&quot;: &quot;#امام_زمان&quot;, &quot;count&quot;: &quot;+500&quot;},
+
+        {&quot;name&quot;: &quot;#شب_جمعه&quot;, &quot;count&quot;: &quot;+400&quot;},
+
+        {&quot;name&quot;: &quot;#کربلا&quot;, &quot;count&quot;: &quot;+300&quot;}
+
+    ],
+
+    &quot;last_24_hours&quot;: [
+
+        {&quot;name&quot;: &quot;#اربعین&quot;, &quot;count&quot;: &quot;+3000&quot;},
+
+        {&quot;name&quot;: &quot;#امام_حسین&quot;, &quot;count&quot;: &quot;+1000&quot;},
+
+        {&quot;name&quot;: &quot;#امام_زمان&quot;, &quot;count&quot;: &quot;+700&quot;},
+
+        {&quot;name&quot;: &quot;#کربلا&quot;, &quot;count&quot;: &quot;+600&quot;},
+
+        {&quot;name&quot;: &quot;#شب_جمعه&quot;, &quot;count&quot;: &quot;+400&quot;}
+
+    ],
+
+    ...
+
+}
+
+</code></pre>
+<h2 id="_7">خاتمه</h2>
+<p>من <a href="">bistcuite</a> هستم، امیدوارم که این پکیج بدردتون خورده باشه، می‌تونید برای حمایت از پروژه، به <a href="https://github.com/bistcuite/eitaapykit">مخزن کتابخانه در گیت‌هاب</a> ستاره بدهید و چه بهتر که با ارسال pull request به ما در بهتر شدن این پکیج کمک کنید.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
