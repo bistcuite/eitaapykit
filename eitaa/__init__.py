@@ -59,12 +59,12 @@ class Eitaa(object):
     def get_latest_messages(channel_id):
         r = requests.get(f"https://eitaa.com/{channel_id}")
         soup = BeautifulSoup(r.text, 'html.parser')
+        pure_messages = soup.find_all('div', attrs={'class': 'etme_widget_message'})
         pure_messages = soup.find_all('div', attrs={'class': 'etme_widget_message_bubble'})
         messages = []
-
         for message in pure_messages:
-            message_text = message.find('div', class_='etme_widget_message_text').text.strip()
-            views_element = message.find('span', class_='etme_widget_message_views')
+            message_text = message.find('div', attrs={'class': 'etme_widget_message_text'})
+            views_element = message.find('span', attrs={'class': 'etme_widget_message_views'})
 
             views = views_element.text.strip() if views_element else "Views not available"
             image_link = message.find('a', attrs={'class': 'etme_widget_message_photo_wrap'})
@@ -86,7 +86,7 @@ class Eitaa(object):
 
             messages.append({
                 'image_link': f"https://eitaa.com/{image_url}" if image_url else None,
-                'text': message_text,
+                'text': str(message_text),
                 'views': views,
                 'iso_time': iso_time,
                 'message_number': int(message_number),
