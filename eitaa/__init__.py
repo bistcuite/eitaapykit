@@ -116,7 +116,7 @@ class Eitaa(object):
         last_24_hours = soup.find("div",
                                   {"class": "col-xl-3 col-lg-6 col-md-6 col-sm-12 animateIn animated zoomInDown"})
         last_7_days = soup.find("div", {"class": "col-xl-3 col-lg-6 col-md-6 col-sm-12 animateIn animated zoomInRight"})
-        last_30_days = soup.find("div", {"col-xl-3 col-lg-6 col-md-6 col-sm-12 animateIn animated zoomInUp"})
+        last_30_days = soup.find("div", {"class": "col-xl-3 col-lg-6 col-md-6 col-sm-12 animateIn animated zoomInUp"})
 
         # پردازش هشتگ های ترند شده در 12 ساعت گذشته
         for trend in last_12_hours.find_all("div", {"class": "row item"}):
