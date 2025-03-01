@@ -1,6 +1,8 @@
 # Eitaa Python Toolkit
 Unofficial toolkit for [Eitaa](https://eitaa.com/) messenger.
 
+🇺🇸 English | [🇮🇷 فارسی](README-FA.md)
+
 [![pypi](https://img.shields.io/pypi/v/eitaa)](https://pypi.org/project/eitaa)
 [![Downloads](https://pepy.tech/badge/eitaa)](https://pepy.tech/project/eitaa)
 ![license](https://img.shields.io/badge/license-MIT-green)
