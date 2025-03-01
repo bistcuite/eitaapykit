@@ -19,7 +19,7 @@ pip install git+https://github.com/bistcuite/eitaapykit.git
 Getting channel's information :
 ```py
 from eitaa import Eitaa
-print(Eitaa.get_info("eitta")) # "eitta" is a channel id
+print(Eitaa.get_info("eitta")) # "eitaa" is a channel id
 ```
 
 Getting latest messages of a channel:
