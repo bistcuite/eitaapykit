@@ -18,7 +18,7 @@ pip install git+https://github.com/bistcuite/eitaapykit.git
 ```
 
 ## Example
-Getting channel's information :
+Getting channel's information:
 ```py
 from eitaa import Eitaa
 print(Eitaa.get_info("eitta")) # "eitaa" is a channel id
@@ -30,14 +30,19 @@ from eitaa import Eitaa
 print(Eitaa.get_latest_messages('eitaa'))
 ```
 
-Sending messages :
+Sending messages:
 ```py
 from eitaa import Eitaa
 eitaa_obj = Eitaa("your eitaayar.ir token")
 print(eitaa_obj.send_message("chat id","message text",pin=True))
 ```
 
-Getting trends :
+Getting messages from channels:
+```py
+Eitaa.get_message("YUOR_CHANNEL_ID","YOUR_POST_ID")
+```
+
+Getting trends:
 ```py
 from eitaa import Eitaa
 trends = Eitaa.get_trends()

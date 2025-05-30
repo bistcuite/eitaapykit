@@ -37,6 +37,11 @@ eitaa_obj = Eitaa("توکن eitaayar.ir شما")
 print(eitaa_obj.send_message("شناسه چت","متن پیام",pin=True))
 ```
 
+دریافت متن پیام:
+```py
+Eitaa.get_message("YUOR_CHANNEL_ID","YOUR_POST_ID")
+```
+
 دریافت ترندها:
 ```py
 from eitaa import Eitaa
