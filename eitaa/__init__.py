@@ -3,11 +3,70 @@
 import requests
 from bs4 import BeautifulSoup
 from os.path import isfile
+import re
 
 
 class Eitaa(object):
     def __init__(self, token):
         self.token = token
+
+    # دریافت اطلاعات پیام مورد نظر
+    @staticmethod
+    def get_message(username, message_id) -> dict | None:
+        base_url = 'https://eitaa.com'
+        url = f"https://eitaa.com/{username}?before={message_id + 1}"
+    
+        response = requests.get(url)
+        response.raise_for_status()
+    
+        soup = BeautifulSoup(response.text, 'html.parser')
+        tag = soup.find("div", id=str(message_id))
+    
+        if not tag:
+            return None
+    
+        message = {}
+    
+        owner_tag = tag.find("a", class_="etme_widget_message_owner_name")
+        if owner_tag and owner_tag.get_text(strip=True):
+            message["owner_name"] = owner_tag.get_text(strip=True)
+    
+        if owner_tag and owner_tag.has_attr('href'):
+            message["channel_url"] = base_url + owner_tag['href']
+    
+        message["message_url"] = f"https://eitaa.com/s/{username}/{message_id}"
+    
+        msg_text_tag = tag.find("div", class_="etme_widget_message_text")
+        if msg_text_tag and msg_text_tag.get_text(strip=True):
+            message["message_text"] = msg_text_tag.get_text(strip=True)
+            views_tag = tag.find("span", class_="etme_widget_message_views")
+        if views_tag and views_tag.get("data-count") and views_tag.get("data-count").isdigit():
+            message["views"] = int(views_tag.get("data-count"))
+    
+        date_tag = tag.find("time", class_="time")
+        if date_tag and date_tag.get("datetime"):
+            message["date"] = date_tag.get("datetime")
+    
+        author_name_tag = tag.find("a", class_="etme_widget_message_author_name")
+        if author_name_tag and author_name_tag.get_text(strip=True):
+            message["author_name"] = author_name_tag.get_text(strip=True)
+    
+        service_date_tag = tag.find("div", class_="etme_widget_message_service_date")
+        if service_date_tag and service_date_tag.get_text(strip=True):
+            message["service_date"] = service_date_tag.get_text(strip=True)
+    
+        video_time_tag = tag.find("time", class_="message_video_duration")
+        if video_time_tag and video_time_tag.get_text(strip=True):
+            message["video_time"] = video_time_tag.get_text(strip=True)
+    
+        video_thumb_tag = tag.find("i", class_="etme_widget_message_video_thumb")
+        if video_thumb_tag:
+            style = video_thumb_tag.get("style", "")
+            match = re.search(r"url\('(.+?)'\)", style)
+            if match:
+                message["video_thumb"] = match.group(1)
+    
+        return message
 
     # دریافت اطلاعات یک کانال یا حساب کاربری
     @staticmethod
