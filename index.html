@@ -293,7 +293,7 @@
         <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      دریافت هشتگ های ترندشده
+      دریافت یک پست خاص از یک کانال
     </span>
   </a>
   
@@ -302,7 +302,16 @@
         <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      خاتمه
+      دریافت هشتگ های ترندشده
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      درباره من
     </span>
   </a>
   
@@ -499,7 +508,7 @@
         <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      دریافت هشتگ های ترندشده
+      دریافت یک پست خاص از یک کانال
     </span>
   </a>
   
@@ -508,7 +517,16 @@
         <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      خاتمه
+      دریافت هشتگ های ترندشده
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      درباره من
     </span>
   </a>
   
@@ -672,7 +690,25 @@ print(info)
 <pre><code class="language-py">from eitaa import Eitaa
 messages = Eitaa.get_latest_messages('eitaa_faq')
 </code></pre>
-<h2 id="_6">دریافت هشتگ های ترندشده</h2>
+<h2 id="_6">دریافت یک پست خاص از یک کانال</h2>
+<p>برای دریافت متن و اطلاعات یک پست کانال، کافی است آیدی کانال و شمارۀ آن پست را داشته باشید و به شکل زیر می‌توانید مشخصات آن پست، نظیر نام کانال، نام نویسنده، تاریخ پست، متن پست، تاریخ سرویس، زمان و تامنیل ویدئو را برمی‌گرداند.</p>
+<pre><code class="language-py">Eitaa.get_message(&quot;YOUR_CHANNEL_ID&quot;,YOUR_POST_ID)
+</code></pre>
+<p>تابع <code>get_message</code> یک دیکشنری شامل اطلاعات زیر را برمی‌گرداند:</p>
+<pre><code class="language-py">{
+  &quot;owner_name&quot; : ... # نام کانال
+  &quot;channel_url&quot; : ... # لینک کانال
+  &quot;message_url&quot; : ... # لینک پست
+  &quot;message_text&quot; : ... # متن پست
+  &quot;views&quot; : ... # تعداد بازدید پست
+  &quot;date&quot; : ... # تاریخ پست شدن
+  &quot;service_date&quot; : ... # تاریخ سرویس
+  &quot;author_name&quot; : ... # نام نویسنده
+  &quot;video_time&quot; : ... # زمان ویدئو
+  &quot;video_thumb&quot; : ... # لینک تامنیل ویدئو
+}
+</code></pre>
+<h2 id="_7">دریافت هشتگ های ترندشده</h2>
 <p>متد <code>get_trends</code> که یک متد ایستا(static method) در کلاس پایۀ <code>Eitaa</code> است، می‌تواند برای استخراج هشتگ های ترندشده در ایتا، در بازه های زمانی متفاوت استفاده شود. این متد یک لیست متشکل از چهار <code>dict</code> یا دیکشنری برمی‌گرداند:</p>
 <ul>
 <li>
@@ -729,8 +765,13 @@ trends = Eitaa.get_trends()
 }
 
 </code></pre>
-<h2 id="_7">خاتمه</h2>
-<p>من <a href="">bistcuite</a> هستم، امیدوارم که این پکیج بدردتون خورده باشه، می‌تونید برای حمایت از پروژه، به <a href="https://github.com/bistcuite/eitaapykit">مخزن کتابخانه در گیت‌هاب</a> ستاره بدهید و چه بهتر که با ارسال pull request به ما در بهتر شدن این پکیج کمک کنید.</p>
+<h2 id="_8">درباره من</h2>
+<p><strong>سلام من حسنم!</strong></p>
+<p>من یک توسعه‌دهنده‌ی علاقه‌مند به ابزارهای متن‌باز و ساختن چیزهایی هستم که کار دیگران را راحت‌تر می‌کنند. این پکیج نتیجه‌ی تجربه، نیاز شخصی، و تلاش برای به اشتراک گذاشتن دانش با دیگر برنامه‌نویس‌هاست. خوشحال می‌شم اگر بازخورد، پیشنهاد یا مشکلی دیدید، از طریق <a href="https://github.com/bistcuite">GitHub</a> یا <a href="mailto:hnk1440@gmail.com">ایمیل</a> باهام در تماس باشید.</p>
+<p>اینجا یک لیست امکاناتی هست که باید اضافه کنیم، خوشحال میشیم شما هم در پیاده‌سازیش به ما کمک کنید، <a href="https://github.com/bistcuite/eitaapykit">مخزن گیت هاب</a> این پروژه همیشه پذیرای pull request های شماست:</p>
+<ul>
+<li>پیاده سازی api برنامک های ایتا</li>
+</ul>
 
 
 
