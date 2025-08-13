@@ -280,12 +280,6 @@ e.send_message_to_bot(chat_id,text)
 >
 > این دسترسی با زدن کلید شروع توسط کاربر و یا در زمان باز کردن با لینک مستقیم در یک پیغام از کاربر دریافت می‌شود.
 
-!!! note
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
-
 ## درباره من
 
 **سلام من حسنم!**
