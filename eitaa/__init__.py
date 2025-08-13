@@ -155,7 +155,7 @@ class Eitaa(object):
         return messages
     
     # ارسال پیام به کاربرانِ برنامک
-    def send_message_to_app(self,chat_id,text):
+    def send_message_to_bot(self,chat_id,text):
         r = requests.post(
             f"https://eitaayar.ir/api/app/sendMessage",
             data={
