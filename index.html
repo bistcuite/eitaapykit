@@ -311,6 +311,39 @@
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
+      ساخت بات(برنامه) ایتا
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ساخت بات(برنامه) ایتا">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      چگونه یک بات بسازیم؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      ارسال پیام به کاربران توسط بات
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
       درباره من
     </span>
   </a>
@@ -526,6 +559,39 @@
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
+      ساخت بات(برنامه) ایتا
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ساخت بات(برنامه) ایتا">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      چگونه یک بات بسازیم؟
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      ارسال پیام به کاربران توسط بات
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
       درباره من
     </span>
   </a>
@@ -547,23 +613,23 @@
                   
 
 
-<h1 id="api">کیت کار با API ایتا در پایتون</h1>
+<h1 id="api">کتابخانۀ کار با API ایتا برای پایتون</h1>
 <p><strong>ایتاپای‌کیت</strong> یک ابزار غیررسمی به زبان پایتون است که راهکار هایی برای استفاده از API های این پیامرسان را ارائه می‌دهد.</p>
 <p><strong>نکته:</strong> برای آنکه بتوانید در کانال‌ها و گروه‌ها پیغام یا فایل ارسال کنید، قبل از هرکاری لازم است، کاربر <a href="https://eitaa.com/sender">@sender</a> را در کانال یا گروه خود به عنوان <strong>مدیر</strong> اضافه کنید.
 <strong>نکته:</strong> با توجه به آپدیت مداوم نسخه وب ایتا توسط شرکت سازنده ممکن است برخی از ویژگی های این کتابخانه موقتا از کار بیوفتد، اگر با چنین چیزی مواجه شدید، می‌توانید با <a href="https://github.com/bistcuite/eitaapykit/issues">ایجاد issue در مخزن گیت‌هاب</a>، ما را مطلع کنید تا هرچه سریع‌تر مشکل را برطرف سازیم.</p>
 <h2 id="_1">نصب</h2>
 <p>شما می‌توانید با دستور زیر آخرین نسخۀ eitaapykit را برای پایتون دریافت نمایید:</p>
-<pre><code>pip install eitaa
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install eitaa
+</span></code></pre></div>
 <p>همچنین نسخه <em>درحال توسعه</em> نیز از طریق دستور زیر قابل نصب است:</p>
-<pre><code>pip install git+https://github.com/bistcuite/eitaapykit.git
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip install git+https://github.com/bistcuite/eitaapykit.git
+</span></code></pre></div>
 <h2 id="eitaa">کلاس پایۀ <code>Eitaa</code></h2>
 <p>برای اینکه بتوانید پیغام یا فایل ارسال کنید، لازم است ابتدا به صورت زیر یک نمونه(instance) از آن ایجاد کنید و سپس توکنی را که از سایت <a href="https://eitaayar.ir">ایتایار</a> دریافت کرده‌اید را به عنوان پارامتر به کلاس <code>Eitaa</code> بدهید:</p>
-<pre><code class="language-py">from eitaa import Eitaa
-token = &quot;your eitaayar.ir token&quot;
-e = Eitaa(token)
-</code></pre>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">eitaa</span> <span class="kn">import</span> <span class="n">Eitaa</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">token</span> <span class="o">=</span> <span class="s2">&quot;your eitaayar.ir token&quot;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">e</span> <span class="o">=</span> <span class="n">Eitaa</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+</span></code></pre></div>
 <h2 id="_2">ارسال پیغام</h2>
 <p>برای ارسال پیغام(پیام به صورت متن) کافی است از متد <code>send_message</code> در کلاس <code>Eitaa</code> استفاده کنید.</p>
 <p>پارامتر های متد <code>send_message</code>:</p>
@@ -592,9 +658,9 @@ e = Eitaa(token)
 <p><code>date</code>(اختیاری) : فرمت زمانی Unix که می‌تواند زمانی در آینده را برای ارسال پیام مشخص کند.</p>
 </li>
 </ul>
-<p>مثال:</p>
-<pre><code class="language-py">print(e.send_message(&quot;chat id&quot;,&quot;message text&quot;,pin=True))
-</code></pre>
+<p>مثال:
+<div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;chat id&quot;</span><span class="p">,</span><span class="s2">&quot;message text&quot;</span><span class="p">,</span><span class="n">pin</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+</span></code></pre></div></p>
 <p>تابع یک پاسخ JSON حاوی اطلاعاتی در مورد پیام ارسال شده برمی گرداند که حاوی فیلد های زیر است:</p>
 <ul>
 <li><code>ok</code> (بولین):</li>
@@ -631,9 +697,9 @@ e = Eitaa(token)
 <p><code>date</code>(اختیاری) : فرمت زمانی Unix که می‌تواند زمانی در آینده را برای ارسال پیام مشخص کند.</p>
 </li>
 </ul>
-<p>مثال:</p>
-<pre><code class="language-py">print(e.send_file(&quot;chat id&quot;,&quot;caption&quot;,&quot;README.txt&quot;,pin=True))
-</code></pre>
+<p>مثال:
+<div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">send_file</span><span class="p">(</span><span class="s2">&quot;chat id&quot;</span><span class="p">,</span><span class="s2">&quot;caption&quot;</span><span class="p">,</span><span class="s2">&quot;README.txt&quot;</span><span class="p">,</span><span class="n">pin</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+</span></code></pre></div></p>
 <p>تابع یک پاسخ JSON حاوی اطلاعاتی در مورد پیام ارسال شده برمی گرداند که حاوی فیلد های زیر است:</p>
 <ul>
 <li><code>ok</code> (بولین):</li>
@@ -648,27 +714,25 @@ e = Eitaa(token)
 <p>پارامتر های متد <code>get_info</code> :
 - <code>channel_or_user_id: str</code>: شناسۀ عمومی کانال یا کاربر</p>
 <p>مثال:</p>
-<pre><code class="language-py">from eitaa import Eitaa
-info = Eitaa.get_info(&quot;eitaa_faq&quot;)
-print(info)
-</code></pre>
-<p>نمونه اطلاعات دریافتی:</p>
-<pre><code class="language-json">
-{
-
-    &quot;name&quot;: &quot;راهنمای جامع ایتا&quot;,
-
-    &quot;image_url&quot;: &quot;will contains a url&quot;,
-
-    &quot;users&quot;: &quot;205.9K&quot;,
-
-    &quot;description&quot;: &quot;پاسخ به پرسش\u200cهای متداول کاربران ایتا\n\nپشتیبانی کاربران:\n@support\n\nکانال اطلاع\u200cرسانی رسمی:\n@eitaa\n\nوبسایت رسمی برنامه:\nhttps://eitaa.com&quot;, &quot;is_verified&quot;: true,
-
-    &quot;is_channel&quot;: true
-
-}
-
-</code></pre>
+<p><div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">eitaa</span> <span class="kn">import</span> <span class="n">Eitaa</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">info</span> <span class="o">=</span> <span class="n">Eitaa</span><span class="o">.</span><span class="n">get_info</span><span class="p">(</span><span class="s2">&quot;eitaa_faq&quot;</span><span class="p">)</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+</span></code></pre></div>
+نمونه اطلاعات دریافتی:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;راهنمای جامع ایتا&quot;</span><span class="p">,</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="nt">&quot;image_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;will contains a url&quot;</span><span class="p">,</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="nt">&quot;users&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;205.9K&quot;</span><span class="p">,</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;پاسخ به پرسش\u200cهای متداول کاربران ایتا\n\nپشتیبانی کاربران:\n@support\n\nکانال اطلاع\u200cرسانی رسمی:\n@eitaa\n\nوبسایت رسمی برنامه:\nhttps://eitaa.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;is_verified&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="nt">&quot;is_channel&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="p">}</span>
+</span></code></pre></div>
 <h2 id="_5">دریافت آخرین پیام های یک کانال عمومی</h2>
 <p>متد <code>get_latest_messages</code> که یک متد ایستا(static method) است، می‌تواند برای دریافت چند پیام آخر یک کانال(معمولا ده پیام) استفاده شود. مقدار خروجی این متد یک لیست متشکل از <code>dict</code>هایی خواهد بود که هر یک حاوی اطلاعات هر پیام است و فیلد هایی به شکل زیر دارد:
 - <code>text</code> : متن پیام</p>
@@ -687,27 +751,27 @@ print(info)
 مثال:</p>
 </li>
 </ul>
-<pre><code class="language-py">from eitaa import Eitaa
-messages = Eitaa.get_latest_messages('eitaa_faq')
-</code></pre>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">eitaa</span> <span class="kn">import</span> <span class="n">Eitaa</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">messages</span> <span class="o">=</span> <span class="n">Eitaa</span><span class="o">.</span><span class="n">get_latest_messages</span><span class="p">(</span><span class="s1">&#39;eitaa_faq&#39;</span><span class="p">)</span>
+</span></code></pre></div>
 <h2 id="_6">دریافت یک پست خاص از یک کانال</h2>
-<p>برای دریافت متن و اطلاعات یک پست کانال، کافی است آیدی کانال و شمارۀ آن پست را داشته باشید و به شکل زیر می‌توانید مشخصات آن پست، نظیر نام کانال، نام نویسنده، تاریخ پست، متن پست، تاریخ سرویس، زمان و تامنیل ویدئو را برمی‌گرداند.</p>
-<pre><code class="language-py">Eitaa.get_message(&quot;YOUR_CHANNEL_ID&quot;,YOUR_POST_ID)
-</code></pre>
-<p>تابع <code>get_message</code> یک دیکشنری شامل اطلاعات زیر را برمی‌گرداند:</p>
-<pre><code class="language-py">{
-  &quot;owner_name&quot; : ... # نام کانال
-  &quot;channel_url&quot; : ... # لینک کانال
-  &quot;message_url&quot; : ... # لینک پست
-  &quot;message_text&quot; : ... # متن پست
-  &quot;views&quot; : ... # تعداد بازدید پست
-  &quot;date&quot; : ... # تاریخ پست شدن
-  &quot;service_date&quot; : ... # تاریخ سرویس
-  &quot;author_name&quot; : ... # نام نویسنده
-  &quot;video_time&quot; : ... # زمان ویدئو
-  &quot;video_thumb&quot; : ... # لینک تامنیل ویدئو
-}
-</code></pre>
+<p>برای دریافت متن و اطلاعات یک پست کانال، کافی است آیدی کانال و شمارۀ آن پست را داشته باشید و به شکل زیر می‌توانید مشخصات آن پست، نظیر نام کانال، نام نویسنده، تاریخ پست، متن پست، تاریخ سرویس، زمان و تامنیل ویدئو را برمی‌گرداند.
+<div class="language-py highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">Eitaa</span><span class="o">.</span><span class="n">get_message</span><span class="p">(</span><span class="s2">&quot;YOUR_CHANNEL_ID&quot;</span><span class="p">,</span><span class="n">YOUR_POST_ID</span><span class="p">)</span>
+</span></code></pre></div>
+تابع <code>get_message</code> یک دیکشنری شامل اطلاعات زیر را برمی‌گرداند:
+<div class="language-py highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">{</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  <span class="s2">&quot;owner_name&quot;</span> <span class="p">:</span> <span class="o">...</span> <span class="c1"># نام کانال</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  <span class="s2">&quot;channel_url&quot;</span> <span class="p">:</span> <span class="o">...</span> <span class="c1"># لینک کانال</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>  <span class="s2">&quot;message_url&quot;</span> <span class="p">:</span> <span class="o">...</span> <span class="c1"># لینک پست</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>  <span class="s2">&quot;message_text&quot;</span> <span class="p">:</span> <span class="o">...</span> <span class="c1"># متن پست</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>  <span class="s2">&quot;views&quot;</span> <span class="p">:</span> <span class="o">...</span> <span class="c1"># تعداد بازدید پست</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>  <span class="s2">&quot;date&quot;</span> <span class="p">:</span> <span class="o">...</span> <span class="c1"># تاریخ پست شدن</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>  <span class="s2">&quot;service_date&quot;</span> <span class="p">:</span> <span class="o">...</span> <span class="c1"># تاریخ سرویس</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>  <span class="s2">&quot;author_name&quot;</span> <span class="p">:</span> <span class="o">...</span> <span class="c1"># نام نویسنده</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>  <span class="s2">&quot;video_time&quot;</span> <span class="p">:</span> <span class="o">...</span> <span class="c1"># زمان ویدئو</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>  <span class="s2">&quot;video_thumb&quot;</span> <span class="p">:</span> <span class="o">...</span> <span class="c1"># لینک تامنیل ویدئو</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="p">}</span>
+</span></code></pre></div></p>
 <h2 id="_7">دریافت هشتگ های ترندشده</h2>
 <p>متد <code>get_trends</code> که یک متد ایستا(static method) در کلاس پایۀ <code>Eitaa</code> است، می‌تواند برای استخراج هشتگ های ترندشده در ایتا، در بازه های زمانی متفاوت استفاده شود. این متد یک لیست متشکل از چهار <code>dict</code> یا دیکشنری برمی‌گرداند:</p>
 <ul>
@@ -724,48 +788,76 @@ messages = Eitaa.get_latest_messages('eitaa_faq')
 <p><code>last_30_days</code>: لیست هشتگ های ترند شده در 30 روز گذشته همراه با تعداد هشتگ‌ها(که خودش متشکل از لیست از دیکشنری‌ها است که دارای دو فیلد <code>name</code> و <code>count</code> هستند، که شامل نام هشتگ و تعداد آن می‌شود).</p>
 </li>
 </ul>
-<p>مثال:</p>
-<pre><code class="language-py">from eitaa import Eitaa
-trends = Eitaa.get_trends()
-</code></pre>
+<p>مثال:
+<div class="language-py highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">from</span> <span class="nn">eitaa</span> <span class="kn">import</span> <span class="n">Eitaa</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">trends</span> <span class="o">=</span> <span class="n">Eitaa</span><span class="o">.</span><span class="n">get_trends</span><span class="p">()</span>
+</span></code></pre></div></p>
 <p>خروجی نمونه:</p>
-<pre><code class="language-json">
-{
-
-    &quot;last_12_hours&quot;: [
-
-        {&quot;name&quot;: &quot;#اربعین&quot;, &quot;count&quot;: &quot;+1500&quot;},
-
-        {&quot;name&quot;: &quot;#امام_حسین&quot;, &quot;count&quot;: &quot;+500&quot;},
-
-        {&quot;name&quot;: &quot;#امام_زمان&quot;, &quot;count&quot;: &quot;+500&quot;},
-
-        {&quot;name&quot;: &quot;#شب_جمعه&quot;, &quot;count&quot;: &quot;+400&quot;},
-
-        {&quot;name&quot;: &quot;#کربلا&quot;, &quot;count&quot;: &quot;+300&quot;}
-
-    ],
-
-    &quot;last_24_hours&quot;: [
-
-        {&quot;name&quot;: &quot;#اربعین&quot;, &quot;count&quot;: &quot;+3000&quot;},
-
-        {&quot;name&quot;: &quot;#امام_حسین&quot;, &quot;count&quot;: &quot;+1000&quot;},
-
-        {&quot;name&quot;: &quot;#امام_زمان&quot;, &quot;count&quot;: &quot;+700&quot;},
-
-        {&quot;name&quot;: &quot;#کربلا&quot;, &quot;count&quot;: &quot;+600&quot;},
-
-        {&quot;name&quot;: &quot;#شب_جمعه&quot;, &quot;count&quot;: &quot;+400&quot;}
-
-    ],
-
-    ...
-
-}
-
-</code></pre>
-<h2 id="_8">درباره من</h2>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">{</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="nt">&quot;last_12_hours&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#اربعین&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+1500&quot;</span><span class="p">},</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#امام_حسین&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+500&quot;</span><span class="p">},</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#امام_زمان&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+500&quot;</span><span class="p">},</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#شب_جمعه&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+400&quot;</span><span class="p">},</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#کربلا&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+300&quot;</span><span class="p">}</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="p">],</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="nt">&quot;last_24_hours&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#اربعین&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+3000&quot;</span><span class="p">},</span>
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#امام_حسین&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+1000&quot;</span><span class="p">},</span>
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>
+</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#امام_زمان&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+700&quot;</span><span class="p">},</span>
+</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>
+</span><span id="__span-11-25"><a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#کربلا&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+600&quot;</span><span class="p">},</span>
+</span><span id="__span-11-26"><a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>
+</span><span id="__span-11-27"><a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#شب_جمعه&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+400&quot;</span><span class="p">}</span>
+</span><span id="__span-11-28"><a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>
+</span><span id="__span-11-29"><a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="p">],</span>
+</span><span id="__span-11-30"><a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>
+</span><span id="__span-11-31"><a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err">...</span>
+</span><span id="__span-11-32"><a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a>
+</span><span id="__span-11-33"><a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="_8">ساخت بات(برنامه) ایتا</h2>
+<p>برنامه یک گفت‌وگو در ایتاست که امکان ارسال و دریافت پیام، پیوست برنامک و اجرای برنامک‌ها را فراهم می‌کند. در برخی از پیامرسان‌ها این وظیفه را «بات» انجام می‌دهد.</p>
+<h3 id="_9">چگونه یک بات بسازیم؟</h3>
+<ul>
+<li>با زدن روی این <a href="https://eitaayar.ir/">لینک</a>، وارد سامانه ایتایار شوید و به پنل کاربری خود بروید (اگر اکانت ندارید، ابتدا لازم است ثبت‌نام کنید)</li>
+<li>سپس از انتهای منوی سمت راست، روی دکمه «برنامه» بزنید.</li>
+<li>پس از انتخاب گزینه «افزودن برنامه» در صفحه جدید، اطلاعات مربوط به برنامه، شامل تصویر پروفایل، نام، نام کاربری و بیوی برنامه را وارد کنید.</li>
+<li>همچنین عنوان دکمه، آدرس دکمه و عکس و پیام شروع برنامه را در همین بخش وارد کنید.</li>
+<li>حالا روی گزینه ساخت برنامه بزنید.</li>
+</ul>
+<h3 id="_10">ارسال پیام به کاربران توسط بات</h3>
+<p>بعد از اینکه برنامه را ساختید حالا می‌توانید با استفاده از این کتابخانه توسط بات پیام متنی ارسال کنید، کافی است یک نمونه از کلاس <code>Eitaa</code> ایجاد کنید و از متد <code>send_message_to_bot</code> استفاده کنید:
+<div class="language-py highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">from</span> <span class="nn">eitaa</span> <span class="kn">import</span> <span class="n">Eitaa</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">token</span> <span class="o">=</span> <span class="s2">&quot;توکن دریافتی شما از ایتایار&quot;</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">e</span> <span class="o">=</span> <span class="n">Eitaa</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="n">chat_id</span> <span class="o">=</span> <span class="s2">&quot;شامل یک عدد چند رقمی است که از سایت ایتایار قابل دریافت است&quot;</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;متنی که می‌خواهید توسط بات ارسال شود&quot;</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="n">e</span><span class="o">.</span><span class="n">send_message_to_bot</span><span class="p">(</span><span class="n">chat_id</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
+</span></code></pre></div></p>
+<blockquote>
+<p><em>هشدار</em></p>
+<p>ارسال پیام تنها زمانی ممکن است که کاربر به شما دسترسی ارسال داده باشد.</p>
+<p>این دسترسی با زدن کلید شروع توسط کاربر و یا در زمان باز کردن با لینک مستقیم در یک پیغام از کاربر دریافت می‌شود.</p>
+</blockquote>
+<p>!!! note</p>
+<div class="language-text highlight"><pre><span></span><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.
+</code></pre></div>
+<h2 id="_11">درباره من</h2>
 <p><strong>سلام من حسنم!</strong></p>
 <p>من یک توسعه‌دهنده‌ی علاقه‌مند به ابزارهای متن‌باز و ساختن چیزهایی هستم که کار دیگران را راحت‌تر می‌کنند. این پکیج نتیجه‌ی تجربه، نیاز شخصی، و تلاش برای به اشتراک گذاشتن دانش با دیگر برنامه‌نویس‌هاست. خوشحال می‌شم اگر بازخورد، پیشنهاد یا مشکلی دیدید، از طریق <a href="https://github.com/bistcuite">GitHub</a> یا <a href="mailto:hnk1440@gmail.com">ایمیل</a> باهام در تماس باشید.</p>
 <p>اینجا یک لیست امکاناتی هست که باید اضافه کنیم، خوشحال میشیم شما هم در پیاده‌سازیش به ما کمک کنید، <a href="https://github.com/bistcuite/eitaapykit">مخزن گیت هاب</a> این پروژه همیشه پذیرای pull request های شماست:</p>
@@ -818,7 +910,7 @@ trends = Eitaa.get_trends()
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "content.code.select"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}}</script>
     
     
       <script src="assets/javascripts/bundle.1e8ae164.min.js"></script>
