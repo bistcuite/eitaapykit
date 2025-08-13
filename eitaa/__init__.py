@@ -153,6 +153,18 @@ class Eitaa(object):
         print(len(messages))
 
         return messages
+    
+    # ارسال پیام به کاربرانِ برنامک
+    def send_message_to_app(self,chat_id,text):
+        r = requests.post(
+            f"https://eitaayar.ir/api/app/sendMessage",
+            data={
+                'token': self.token,
+                'chat_id': chat_id,
+                'text': text
+            }
+        )
+        return r.json()
 
     # دریافت آخرین هشتگ های ترند شده در ایتا
     @staticmethod
