@@ -1,4 +1,4 @@
-# کیت کار با API ایتا در پایتون
+# کتابخانۀ کار با API ایتا برای پایتون
 
 **ایتاپای‌کیت** یک ابزار غیررسمی به زبان پایتون است که راهکار هایی برای استفاده از API های این پیامرسان را ارائه می‌دهد.
 
@@ -273,6 +273,19 @@ chat_id = "شامل یک عدد چند رقمی است که از سایت ایت
 text = "متنی که می‌خواهید توسط بات ارسال شود"
 e.send_message_to_bot(chat_id,text)
 ```
+
+> *هشدار*
+>
+> ارسال پیام تنها زمانی ممکن است که کاربر به شما دسترسی ارسال داده باشد.
+>
+> این دسترسی با زدن کلید شروع توسط کاربر و یا در زمان باز کردن با لینک مستقیم در یک پیغام از کاربر دریافت می‌شود.
+
+!!! note
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
 ## درباره من
 
 **سلام من حسنم!**
