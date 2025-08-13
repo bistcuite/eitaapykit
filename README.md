@@ -39,7 +39,7 @@ print(eitaa_obj.send_message("chat id","message text",pin=True))
 
 Getting messages from channels:
 ```py
-Eitaa.get_message("YUOR_CHANNEL_ID","YOUR_POST_ID")
+Eitaa.get_message("YOUR_CHANNEL_ID","YOUR_POST_ID")
 ```
 
 Getting trends:
@@ -53,3 +53,4 @@ Read documentation [here](https://hasan.is-a.dev/eitaapykit).
 
 ## Licence
 This project is licensed under the **MIT** License, read [License](LICENSE) for more information.
+
