@@ -65,7 +65,20 @@ class Eitaa(object):
             match = re.search(r"url\('(.+?)'\)", style)
             if match:
                 message["video_thumb"] = match.group(1)
-    
+
+        forwarded_block = tag.select_one("div.etme_widget_message_forwarded_from")
+        is_forwarded = forwarded_block is not None
+        message['is_forwarded'] = 0
+        message['forwarded_from_name'] = ""
+        message['forwarded_from_id'] = ""
+        if is_forwarded:
+            message['is_forwarded'] = 1
+            link = forwarded_block.select_one("a.etme_widget_message_forwarded_from_name")
+            if link:
+                message['forwarded_from_name'] = link.get_text(strip=True)
+                href = link.get("href", "")
+                message['forwarded_from_id'] = href
+
         return message
 
     # دریافت اطلاعات یک کانال یا حساب کاربری
