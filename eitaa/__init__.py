@@ -37,8 +37,8 @@ class Eitaa(object):
         message["message_url"] = f"https://eitaa.com/s/{username}/{message_id}"
     
         msg_text_tag = tag.find("div", class_="etme_widget_message_text")
-        if msg_text_tag and msg_text_tag.get_text(strip=True):
-            message["message_text"] = msg_text_tag.get_text(strip=True)
+        if msg_text_tag and msg_text_tag.get_text(strip=False):
+            message["message_text"] = msg_text_tag.get_text(strip=False)
             views_tag = tag.find("span", class_="etme_widget_message_views")
         if views_tag and views_tag.get("data-count") and views_tag.get("data-count").isdigit():
             message["views"] = int(views_tag.get("data-count"))
