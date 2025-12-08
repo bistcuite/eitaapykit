@@ -191,6 +191,9 @@ Eitaa.get_message("YOUR_CHANNEL_ID",YOUR_POST_ID)
   "author_name" : ... # نام نویسنده
   "video_time" : ... # زمان ویدئو
   "video_thumb" : ... # لینک تامنیل ویدئو
+  "is_forwarded" : ... # True یا False در صورت اینکه پیام فوروارد شده است یا نه
+  "forwarded_from_name" : ... # نام کانالی که پیام از آن فوروارد شده است(اگر پیام فوروارد نشده باشد خالی است)
+  "forwarded_from_id": ... # آیدی کانالی که پیام از آن فوروارد شده است
 }
 ```
 
