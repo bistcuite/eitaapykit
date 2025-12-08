@@ -770,7 +770,10 @@
 </span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>  <span class="s2">&quot;author_name&quot;</span> <span class="p">:</span> <span class="o">...</span> <span class="c1"># نام نویسنده</span>
 </span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>  <span class="s2">&quot;video_time&quot;</span> <span class="p">:</span> <span class="o">...</span> <span class="c1"># زمان ویدئو</span>
 </span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>  <span class="s2">&quot;video_thumb&quot;</span> <span class="p">:</span> <span class="o">...</span> <span class="c1"># لینک تامنیل ویدئو</span>
-</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="p">}</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>  <span class="s2">&quot;is_forwarded&quot;</span> <span class="p">:</span> <span class="o">...</span> <span class="c1"># True یا False در صورت اینکه پیام فوروارد شده است یا نه</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>  <span class="s2">&quot;forwarded_from_name&quot;</span> <span class="p">:</span> <span class="o">...</span> <span class="c1"># نام کانالی که پیام از آن فوروارد شده است(اگر پیام فوروارد نشده باشد خالی است)</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>  <span class="s2">&quot;forwarded_from_id&quot;</span><span class="p">:</span> <span class="o">...</span> <span class="c1"># آیدی کانالی که پیام از آن فوروارد شده است</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="p">}</span>
 </span></code></pre></div></p>
 <h2 id="_7">دریافت هشتگ های ترندشده</h2>
 <p>متد <code>get_trends</code> که یک متد ایستا(static method) در کلاس پایۀ <code>Eitaa</code> است، می‌تواند برای استخراج هشتگ های ترندشده در ایتا، در بازه های زمانی متفاوت استفاده شود. این متد یک لیست متشکل از چهار <code>dict</code> یا دیکشنری برمی‌گرداند:</p>
