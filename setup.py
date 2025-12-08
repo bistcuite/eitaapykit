@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='eitaa',
-    version='2.3.0',
+    version='2.3.1',
     packages=['eitaa'],
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -14,4 +14,4 @@ setup(
         'requests',
         'bs4'
     ]
- )
+)

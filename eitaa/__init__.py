@@ -8,11 +8,35 @@ import re
 
 class Eitaa(object):
     def __init__(self, token):
+        """
+        Initialize Eitaa API wrapper.
+
+        Parameters
+        ----------
+        token : str
+            API token from eitaayar.ir.
+        """
         self.token = token
 
     # دریافت اطلاعات پیام مورد نظر
     @staticmethod
     def get_message(username, message_id) -> dict | None:
+        """
+        Fetch details of a specific Eitaa message by scraping the message page.
+
+        Parameters
+        ----------
+        username : str
+            Channel or user ID (without '@').
+        message_id : int
+            Numeric ID of the message.
+
+        Returns
+        -------
+        dict | None
+            Parsed message data including owner, text, views, media info, forward info, etc.
+            Returns None if message is not found.
+        """
         base_url = 'https://eitaa.com'
         url = f"https://eitaa.com/{username}?before={message_id + 1}"
     
@@ -84,6 +108,19 @@ class Eitaa(object):
     # دریافت اطلاعات یک کانال یا حساب کاربری
     @staticmethod
     def get_info(channel_or_user_id):
+        """
+        Get information about a channel or user profile.
+
+        Parameters
+        ----------
+        channel_or_user_id : str
+            ID of the target page (channel username or user ID).
+
+        Returns
+        -------
+        dict
+            Information including name, image URL, verification, description, and user count.
+        """
         r = requests.get(f"https://eitaa.com/{channel_or_user_id}")
         soup = BeautifulSoup(r.text, 'html.parser')
         result = {}
@@ -129,6 +166,19 @@ class Eitaa(object):
     # دریافت آخرین پیام های یک کانال
     @staticmethod
     def get_latest_messages(channel_id):
+        """
+        Fetch the latest messages of a channel by scraping the channel page.
+
+        Parameters
+        ----------
+        channel_id : str
+            Channel username or ID.
+
+        Returns
+        -------
+        list[dict]
+            List of latest messages with text, views, image, timestamp, and message number.
+        """
         r = requests.get(f"https://eitaa.com/{channel_id}")
         soup = BeautifulSoup(r.text, 'html.parser')
         pure_messages = soup.find_all('div', attrs={'class': 'etme_widget_message'})
@@ -158,7 +208,7 @@ class Eitaa(object):
 
             messages.append({
                 'image_link': f"https://eitaa.com/{image_url}" if image_url else None,
-                'text': str(message_text),
+                'text': message_text.get_text(separator="\n", strip=True),
                 'views': views,
                 'iso_time': iso_time,
                 'message_number': int(message_number),
@@ -168,11 +218,28 @@ class Eitaa(object):
         return messages
     
     # ارسال پیام به کاربرانِ برنامک
-    def send_message_to_bot(self,chat_id,text):
+    def send_message_to_bot(self,chat_id,text,bot_token):
+        """
+        Send a message to a eitaa bot.
+
+        Parameters
+        ----------
+        chat_id : str | int
+            Target user's chat ID.
+        text : str
+            Message text.
+        bot_token:
+            Your token bot(it is diffrent from main token)
+
+        Returns
+        -------
+        dict
+            JSON response from API.
+        """
         r = requests.post(
             f"https://eitaayar.ir/api/app/sendMessage",
             data={
-                'token': self.token,
+                'token': bot_token,
                 'chat_id': chat_id,
                 'text': text
             }
@@ -182,6 +249,14 @@ class Eitaa(object):
     # دریافت آخرین هشتگ های ترند شده در ایتا
     @staticmethod
     def get_trends():
+        """
+        Get trending hashtags in Eitaa.
+
+        Returns
+        -------
+        dict
+            Trending hashtags in last 12 hours, 24 hours, 7 days, and 30 days.
+        """
         result = {
             "last_12_hours": [],
             "last_24_hours": [],
@@ -195,12 +270,16 @@ class Eitaa(object):
 
         soup = BeautifulSoup(r.text, 'html.parser')
 
-        last_12_hours = soup.find("div",
-                                  {"class": "col-xl-3 col-lg-6 col-md-6 col-sm-12 animateIn animated zoomInLeft"})
-        last_24_hours = soup.find("div",
-                                  {"class": "col-xl-3 col-lg-6 col-md-6 col-sm-12 animateIn animated zoomInDown"})
-        last_7_days = soup.find("div", {"class": "col-xl-3 col-lg-6 col-md-6 col-sm-12 animateIn animated zoomInRight"})
-        last_30_days = soup.find("div", {"class": "col-xl-3 col-lg-6 col-md-6 col-sm-12 animateIn animated zoomInUp"})
+        trend_blocks = soup.find_all("div", {
+            "class": "col-xl-3 col-lg-6 col-md-6 col-sm-12"
+        })
+
+        # اگه کمتر از 4 تا بود، از خطا جلوگیری کن
+        if len(trend_blocks) < 4:
+            raise Exception("Could not find all 4 trend sections")
+
+        # هر کدوم از چهار ستون را جداگانه اختصاص بده
+        last_12_hours, last_24_hours, last_7_days, last_30_days = trend_blocks[:4]
 
         # پردازش هشتگ های ترند شده در 12 ساعت گذشته
         for trend in last_12_hours.find_all("div", {"class": "row item"}):
@@ -246,6 +325,31 @@ class Eitaa(object):
     # ارسال پیام متنی از طریق ایتایار
     def send_message(self, chat_id, text, pin=False, date=None, view_to_delete=-1,
                      disable_notification=False, reply_to_message_id=None):
+        """
+        Send a text message to a channel or group.
+
+        Parameters
+        ----------
+        chat_id : str | int
+            Chat ID to send message.
+        text : str
+            Message text.
+        pin : bool, optional
+            Pin message after sending.
+        date : str, optional
+            Scheduled send time.
+        view_to_delete : int, optional
+            Auto-delete after view count.
+        disable_notification : bool
+            Disable notification.
+        reply_to_message_id : int | None
+            Message to reply to.
+
+        Returns
+        -------
+        dict
+            JSON response from API.
+        """
         r = requests.post(
             f"https://eitaayar.ir/api/{self.token}/sendMessage",
             data={
@@ -261,18 +365,41 @@ class Eitaa(object):
         print(type(r.json()))
         return r.json()
 
-    def delete_message(self, chat_id, message_id):
-        r = requests.post(
-            f"https://eitaayar.ir/api/{self.token}/deleteMessage",
-            data={
-                'chat_id': chat_id,
-                'message_id': message_id,
-            }
-        )
-
     # ارسال فایل از طریق ایتایار
     def send_file(self, chat_id, caption, file, pin=False, date=None, view_to_delete=-1,
                   disable_notification=False, reply_to_message_id=None):
+        """
+        Send a file to a channel or group.
+
+        Parameters
+        ----------
+        chat_id : str | int
+            Target chat ID.
+        caption : str
+            Caption for the file.
+        file : str
+            Path to local file.
+        pin : bool
+            Pin after sending.
+        date : str | None
+            Scheduled send time.
+        view_to_delete : int
+            Auto-delete after this many views.
+        disable_notification : bool
+            Disable notification.
+        reply_to_message_id : int | None
+            Reply target message ID.
+
+        Returns
+        -------
+        dict
+            JSON response from API.
+
+        Raises
+        ------
+        Exception
+            If file does not exist.
+        """
         if not isfile(file):
             raise Exception(f"File `{file}` not found")
 
