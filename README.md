@@ -7,6 +7,11 @@ Unofficial toolkit for [Eitaa](https://eitaa.com/) messenger.
 [![Downloads](https://pepy.tech/badge/eitaa)](https://pepy.tech/project/eitaa)
 ![license](https://img.shields.io/badge/license-MIT-green)
 
+>[!NOTE]
+> If you found this library useful, I would appreciate it if you could donate via [this link](https://reymit.ir/bistcuite); the funds you send will be used to **help the oppressed children of Gaza**.
+>
+> **Death to the child-killing Zionist regime. Death to Israel. [#FreePalestine]()**.
+
 ## Installation
 Installing latest published release :
 ```
@@ -53,4 +58,5 @@ Read documentation [here](https://hasan.is-a.dev/eitaapykit).
 
 ## Licence
 This project is licensed under the **MIT** License, read [License](LICENSE) for more information.
+
 
