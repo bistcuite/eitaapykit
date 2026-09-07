@@ -54,7 +54,7 @@ trends = Eitaa.get_trends()
 ```
 
 ## Documentation
-Read documentation [here](https://hasan.is-a.dev/eitaapykit).
+Read documentation [here]([https://hasan.is-a.dev/eitaapykit](https://bistcuite.github.io/eitaapykit/).
 
 ## Licence
 This project is licensed under the **MIT** License, read [License](LICENSE) for more information.
