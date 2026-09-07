@@ -7,11 +7,6 @@ Unofficial toolkit for [Eitaa](https://eitaa.com/) messenger.
 [![Downloads](https://pepy.tech/badge/eitaa)](https://pepy.tech/project/eitaa)
 ![license](https://img.shields.io/badge/license-MIT-green)
 
->[!NOTE]
-> If you found this library useful, I would appreciate it if you could donate via [this link](https://reymit.ir/bistcuite); the funds you send will be used to **help the oppressed children and the brave and valiant fighters of Palestine**.
->
-> **Death to the child-killing Zionist regime. Death to Israel. Israel must be wiped off the face of the earth.  [#FreePalestine]()**.
-
 ## Installation
 Installing latest published release :
 ```
